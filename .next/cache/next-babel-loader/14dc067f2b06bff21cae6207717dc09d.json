@@ -1,0 +1,1 @@
+{"ast":null,"code":"import NextAuth from 'next-auth';\nimport Providers from 'next-auth/providers';\nexport default NextAuth({\n  providers: [// OAuth authentication providers...\n  Providers.Google({\n    clientId: process.env.GOOGLE_CLIENT_ID,\n    clientSecret: process.env.GOOGLE_CLIENT_SECRET\n  })]\n});","map":null,"metadata":{},"sourceType":"module"}

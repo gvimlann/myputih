@@ -1,0 +1,1 @@
+{"ast":null,"code":"// import NextAuth from 'next-auth';\n// import Providers from 'next-auth/providers';\n// export default NextAuth({\n// \tproviders: [\n// \t\tProviders.Google({\n// \t\t\tclientId: process.env.GOOGLE_CLIENT_ID,\n// \t\t\tclientSecret: process.env.GOOGLE_CLIENT_SECRET,\n// \t\t}),\n// \t],\n// });","map":null,"metadata":{},"sourceType":"script"}
