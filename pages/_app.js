@@ -1,4 +1,6 @@
 import '../styles/globals.css';
+import 'react-leaflet-markercluster/dist/styles.min.css';
+
 import { Provider } from 'next-auth/client';
 
 function MyApp({ Component, pageProps }) {

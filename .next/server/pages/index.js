@@ -49,7 +49,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("../" + ({}[chunkId]||chunkId) + "." + {"9":"87fa6b26658d4d8f25aa"}[chunkId] + ".js");
+/******/ 			var chunk = require("../" + ({}[chunkId]||chunkId) + "." + {"9":"dd08d52359a624ef94a3"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -141,6 +141,13 @@ module.exports = __webpack_require__("RNiq");
 
 /***/ }),
 
+/***/ "A04j":
+/***/ (function(module, exports) {
+
+module.exports = require("react-leaflet-markercluster");
+
+/***/ }),
+
 /***/ "AuoD":
 /***/ (function(module, exports) {
 
@@ -211,7 +218,7 @@ function Header({
   username
 }) {
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    className: 'sticky top-0 z-50 mb-2 bg-gray-200 flex items-center justify-between p-2 lg:px-5 shadow-md',
+    className: 'sticky top-0 z-10 bg-gray-200 flex items-center justify-between p-2 lg:px-5 shadow-md',
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("h1", {
       className: 'text-2xl',
       children: "MyPutih App"
@@ -259,7 +266,7 @@ function Navbar({
           }
         },
         href: "#",
-        className: 'flex-1 block rounded-full bg-red-600 hover:bg-red-400 justify-center text-center p-5 mb-1',
+        className: 'flex-1 block rounded-full bg-red-600 hover:bg-red-400 justify-center text-center p-5 mb-2',
         children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
           className: 'block text-white text-lg',
           children: "Need Help"
@@ -275,7 +282,7 @@ function Navbar({
           }
         },
         href: "#",
-        className: 'flex-1 block rounded-full bg-green-600 hover:bg-green-400 justify-center text-center p-5 mb-1',
+        className: 'flex-1 block rounded-full bg-green-600 hover:bg-green-400 justify-center text-center p-5 mb-2',
         children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
           className: 'block text-white text-lg',
           children: "Give Help"
@@ -319,6 +326,10 @@ var Home_module_default = /*#__PURE__*/__webpack_require__.n(Home_module);
 var external_react_number_format_ = __webpack_require__("uM63");
 var external_react_number_format_default = /*#__PURE__*/__webpack_require__.n(external_react_number_format_);
 
+// CONCATENATED MODULE: ./lib/mock-data/points_need.js
+const points_need = [[-37.72842505, 175.2706335167, '17'], [-37.7282464667, 175.2706460833, '19'], [-37.7276605, 175.2706836667, '25'], [-37.7278661667, 175.2706627333, '23'], [-37.72806185, 175.2706538, '21'], [-37.7281040667, 175.27100185, '18'], [-37.7301143333, 175.2709216167, '1'], [-37.72792945, 175.2710214667, '20'], [-37.7282733167, 175.2709974667, '16'], [-37.7287839667, 175.2709957333, '14'], [-37.7265024833, 175.2713970167, '42'], [-37.7265954333, 175.2713280167, '40'], [-37.7267309167, 175.2712507167, '38'], [-37.7265228, 175.2709706, '39'], [-37.7268735333, 175.2711989, '36'], [-37.7266586333, 175.27090015, '37'], [-37.7259428667, 175.27139155, '45'], [-37.72604375, 175.2716834833, '46'], [-37.7274559833, 175.2707143833, '27'], [-37.7288465, 175.2706621167, '11'], [-37.7291982, 175.2710491333, '10'], [-37.7289922167, 175.2710028167, '12'], [-37.7292691667, 175.27073615, '7'], [-37.7294102167, 175.27113215, '8'], [-37.7290649167, 175.2706785167, '9'], [-37.7300301167, 175.271293, '4'], [-37.7286283833, 175.27063715, '15'], [-37.7254250167, 175.2720879167, '56'], [-37.7253125333, 175.2717429833, '53'], [-37.725191, 175.2718320333, '55']];
+// CONCATENATED MODULE: ./lib/mock-data/points_give.js
+const points_give = [[4.175975, 102.120976, '1'], [-37.78007645, 175.2206278667, '107'], [-37.7761792333, 175.2271736333, '24'], [-37.7776189167, 175.2258753, '44'], [-37.7760834167, 175.2275457833, '25'], [-37.7802256833, 175.22049075, '109'], [-37.7763597, 175.2271748833, '26'], [-37.77900305, 175.2214785, '93'], [-37.7762677667, 175.2275494833, '27'], [-37.7796043833, 175.220437, '100'], [-37.7765240667, 175.2271687667, '28'], [-37.7777572833, 175.2253957833, '48'], [-37.77644445, 175.2275392167, '29'], [-37.7789061333, 175.2216740833, '91'], [-37.77671675, 175.22710215, '30'], [-37.7779318833, 175.2260268, '43'], [-37.77659265, 175.2275279833, '31'], [-37.7776471833, 175.2236296833, '64'], [-37.77688305, 175.2270006, '32'], [-37.7783610333, 175.22232635, '78'], [-37.77738635, 175.2269281333, '33'], [-37.7776497, 175.2238384, '62'], [-37.777065, 175.2268381667, '34']];
 // CONCATENATED MODULE: ./pages/index.js
 
 
@@ -336,7 +347,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const DEFAULT_CENTER = [3.315834, 101.559201];
+
+
+const DEFAULT_CENTER = [4.175975, 102.120976];
 
 async function getData() {
   external_axios_default.a.get(`http://localhost:8080/api/hello`).then(function (response) {// console.log(response.data);
@@ -346,10 +359,10 @@ async function getData() {
 }
 
 class pages_Home extends external_react_default.a.Component {
-  constructor(props) {
+  constructor(_props) {
     var _props$session;
 
-    super(props);
+    super(_props);
 
     _defineProperty(this, "sendOptionToParent", data => {
       this.setState({
@@ -375,6 +388,13 @@ class pages_Home extends external_react_default.a.Component {
       });
     });
 
+    _defineProperty(this, "toggleInfoModal", props => {
+      console.log(typeof props === 'number');
+      const errorModal = document.querySelector('.info-modal');
+      errorModal.classList.toggle('opacity-0');
+      errorModal.classList.toggle('pointer-events-none');
+    });
+
     _defineProperty(this, "toggleErrorModal", () => {
       // const body = document.querySelector('body');
       const errorModal = document.querySelector('.error-modal');
@@ -388,9 +408,9 @@ class pages_Home extends external_react_default.a.Component {
       console.log('info: ', this.state);
     });
 
-    this.session = props.session;
+    this.session = _props.session;
     this.state = {
-      username: (_props$session = props.session) === null || _props$session === void 0 ? void 0 : _props$session.user.name,
+      username: (_props$session = _props.session) === null || _props$session === void 0 ? void 0 : _props$session.user.name,
       contactNumber: 0,
       food: false,
       groceries: false,
@@ -399,10 +419,12 @@ class pages_Home extends external_react_default.a.Component {
       others: false,
       othersDetail: '',
       needHelp: false,
-      userLocation: [0, 0],
-      locationSwitchedOn: false
+      userLocation: DEFAULT_CENTER,
+      locationSwitchedOn: false,
+      mapZoom: 8
     };
     this.toggleModal.bind(this);
+    this.toggleInfoModal.bind(this);
     this.sendOptionToParent.bind(this);
     this.toggleErrorModal.bind(this);
     this.handleSubmit.bind(this);
@@ -420,6 +442,9 @@ class pages_Home extends external_react_default.a.Component {
         locationSwitchedOn: true
       });
       console.log('Location is on');
+      this.setState({
+        mapZoom: 15
+      });
     }, error => {
       this.setState({
         error: "We can't get your location!"
@@ -466,6 +491,9 @@ class pages_Home extends external_react_default.a.Component {
           toggleErrorModal: this.toggleErrorModal,
           sendDataToParent: this.sendOptionToParent,
           locationSwitchedOn: this.state.locationSwitchedOn
+        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+          className: "block fixed z-20 shadow mt-2 mr-2 p-5 bg-gray-500 hover:bg-gray-400 text-white font-bold rounded-full right-0",
+          children: "NGO"
         }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
           className: "error-modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center",
           children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
@@ -524,7 +552,6 @@ class pages_Home extends external_react_default.a.Component {
                   value: this.state.username,
                   placeholder: "Your Name",
                   onChange: e => {
-                    console.log('name: ', e.target.value);
                     this.setState({
                       username: e.target.value
                     });
@@ -841,28 +868,191 @@ class pages_Home extends external_react_default.a.Component {
               })]
             })]
           })]
+        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+          className: "info-modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center",
+          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+            onClick: this.toggleInfoModal,
+            className: "modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+            className: "modal-container bg-white md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto w-full max-w-xs",
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+              className: "flex justify-between items-center p-2 ml-2 mr-2",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                className: "text-2xl font-bold",
+                children: "Person Information"
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                onClick: this.toggleInfoModal,
+                className: "modal-close cursor-pointer z-50",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(outline_["XIcon"], {
+                  className: "w-5 h-5"
+                })
+              })]
+            }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("form", {
+              className: "bg-white shadow-md rounded px-8 pt-6 pb-8",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "name",
+                  children: "Name"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-500 text-medium font-medium mb-2",
+                  htmlFor: "name",
+                  children: "Username"
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "Contact Number"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-500 text-medium font-medium mb-2",
+                  htmlFor: "name",
+                  children: "Contact Number"
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "Items Needed"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                  className: "mt-2",
+                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        checked: true,
+                        disabled: true
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2 text-gray-500 text-medium font-medium mb-2",
+                        children: "Food"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        disabled: true
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2 text-gray-500 text-medium font-medium mb-2",
+                        children: "Groceries"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        disabled: true
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2 text-gray-500 text-medium font-medium mb-2",
+                        children: "Money"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        disabled: true
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2 text-gray-500 text-medium font-medium mb-2",
+                        children: "Medical"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        disabled: true
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2 text-gray-500 text-medium font-medium mb-2",
+                        children: "Others"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    className: "block",
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                      type: "text",
+                      className: `${this.state.others ? 'show' : 'hidden'} form-input mt-1 block w-full border-2`,
+                      placeholder: "Please state your other needs",
+                      disabled: true
+                    })
+                  })]
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "Open Google Maps"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+                  target: "_blank",
+                  href: `https://www.google.com/maps/place/${this.state.userLocation[0]},${this.state.userLocation[1]}`,
+                  children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+                    src: __webpack_require__("w9oB")
+                  })
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                className: "flex items-center justify-between",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                  onClick: this.toggleInfoModal,
+                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  children: "Close"
+                })
+              })]
+            })]
+          })]
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Map, {
           className: Home_module_default.a.homeMap,
           center: this.state.userLocation,
-          zoom: 15,
+          maxZoom: 18,
+          zoom: this.state.mapZoom,
           children: ({
             TileLayer,
             Marker,
             Popup
-          }) => /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
+          }, icon, icon2, userIcon) => /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
             children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(TileLayer, {
               url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
               attribution: "\xA9 <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
             }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
               position: this.state.userLocation,
-              children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Popup, {
-                children: ["A pretty CSS3 popup. ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), " Easily customizable.", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-                  target: "_blank",
-                  href: "https://www.google.com",
-                  children: "Google"
-                })]
+              icon: userIcon,
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
+                children: "Your Location"
               })
-            })]
+            }), points_need.map((marker, key) => /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
+              position: [marker[0], marker[1]],
+              icon: icon,
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                  onClick: () => this.toggleInfoModal(key),
+                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  children: "Open"
+                })
+              })
+            }, `marker-${key}`)), points_give.map((marker, key) => /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
+              position: [marker[0], marker[1]],
+              icon: icon2,
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                  onClick: () => this.toggleInfoModal(key),
+                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  children: "Open"
+                })
+              })
+            }, `marker-${key}`))]
           })
         })]
       })]
@@ -919,6 +1109,13 @@ module.exports = {
 	"homeMap": "Home_homeMap__36czY"
 };
 
+
+/***/ }),
+
+/***/ "w9oB":
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
 
 /***/ }),
 

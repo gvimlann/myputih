@@ -8,8 +8,10 @@ import Navbar from '../components/Navbar';
 import Map from '../components/Map';
 import styles from '../styles/Home.module.css';
 import NumberFormat from 'react-number-format';
+import { points_need } from '../lib/mock-data/points_need';
+import { points_give } from '../lib/mock-data/points_give';
 
-const DEFAULT_CENTER = [3.315834, 101.559201];
+const DEFAULT_CENTER = [4.175975, 102.120976];
 
 async function getData() {
 	axios
@@ -38,10 +40,12 @@ export default class Home extends React.Component {
 			others: false,
 			othersDetail: '',
 			needHelp: false,
-			userLocation: [0, 0],
+			userLocation: DEFAULT_CENTER,
 			locationSwitchedOn: false,
+			mapZoom: 8,
 		};
 		this.toggleModal.bind(this);
+		this.toggleInfoModal.bind(this);
 		this.sendOptionToParent.bind(this);
 		this.toggleErrorModal.bind(this);
 		this.handleSubmit.bind(this);
@@ -70,6 +74,13 @@ export default class Home extends React.Component {
 		});
 	};
 
+	toggleInfoModal = (props) => {
+		console.log(typeof props === 'number');
+		const errorModal = document.querySelector('.info-modal');
+		errorModal.classList.toggle('opacity-0');
+		errorModal.classList.toggle('pointer-events-none');
+	};
+
 	toggleErrorModal = () => {
 		// const body = document.querySelector('body');
 		const errorModal = document.querySelector('.error-modal');
@@ -92,6 +103,7 @@ export default class Home extends React.Component {
 				});
 				this.setState({ locationSwitchedOn: true });
 				console.log('Location is on');
+				this.setState({ mapZoom: 15 });
 			},
 			(error) => {
 				this.setState({ error: "We can't get your location!" });
@@ -136,6 +148,9 @@ export default class Home extends React.Component {
 						sendDataToParent={this.sendOptionToParent}
 						locationSwitchedOn={this.state.locationSwitchedOn}
 					/>
+					<button className="block fixed z-20 shadow mt-2 mr-2 p-5 bg-gray-500 hover:bg-gray-400 text-white font-bold rounded-full right-0">
+						NGO
+					</button>
 					{/* Error Modal-Start */}
 					<div className="error-modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
 						<div
@@ -154,6 +169,7 @@ export default class Home extends React.Component {
 						</div>
 					</div>
 					{/* Error Modal-End */}
+					{/* Modal Start */}
 					<div className="modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
 						<div
 							onClick={this.toggleModal}
@@ -186,7 +202,6 @@ export default class Home extends React.Component {
 											value={this.state.username}
 											placeholder="Your Name"
 											onChange={(e) => {
-												console.log('name: ', e.target.value);
 												this.setState({ username: e.target.value });
 											}}
 										/>
@@ -500,24 +515,191 @@ export default class Home extends React.Component {
 							)}
 						</div>
 					</div>
+					{/* Modal Ends */}
+					{/* Info Modal Start */}
+					<div className="info-modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+						<div
+							onClick={this.toggleInfoModal}
+							className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+						<div className="modal-container bg-white md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto w-full max-w-xs">
+							<div className="flex justify-between items-center p-2 ml-2 mr-2">
+								<p className="text-2xl font-bold">Person Information</p>
+								<div
+									onClick={this.toggleInfoModal}
+									className="modal-close cursor-pointer z-50">
+									<XIcon className="w-5 h-5" />
+								</div>
+							</div>
+							<form className="bg-white shadow-md rounded px-8 pt-6 pb-8">
+								<div className="mb-4">
+									<label
+										className="block text-gray-700 text-sm font-bold mb-2"
+										htmlFor="name">
+										Name
+									</label>
+									<label
+										className="block text-gray-500 text-medium font-medium mb-2"
+										htmlFor="name">
+										Username
+									</label>
+								</div>
+								<div className="mb-4">
+									<label
+										className="block text-gray-700 text-sm font-bold mb-2"
+										htmlFor="contactNumber">
+										Contact Number
+									</label>
+									<label
+										className="block text-gray-500 text-medium font-medium mb-2"
+										htmlFor="name">
+										Contact Number
+									</label>
+								</div>
+								<div className="mb-4">
+									<label
+										className="block text-gray-700 text-sm font-bold mb-2"
+										htmlFor="contactNumber">
+										Items Needed
+									</label>
+									<div className="mt-2">
+										<div>
+											<label className="inline-flex items-center">
+												<input
+													type="checkbox"
+													className="form-checkbox h-6 w-6 border-2 border-gray-300"
+													checked
+													disabled
+												/>
+												<span className="ml-2 text-gray-500 text-medium font-medium mb-2">
+													Food
+												</span>
+											</label>
+										</div>
+										<div>
+											<label className="inline-flex items-center">
+												<input
+													type="checkbox"
+													className="form-checkbox h-6 w-6 border-2 border-gray-300"
+													disabled
+												/>
+												<span className="ml-2 text-gray-500 text-medium font-medium mb-2">
+													Groceries
+												</span>
+											</label>
+										</div>
+										<div>
+											<label className="inline-flex items-center">
+												<input
+													type="checkbox"
+													className="form-checkbox h-6 w-6 border-2 border-gray-300"
+													disabled
+												/>
+												<span className="ml-2 text-gray-500 text-medium font-medium mb-2">
+													Money
+												</span>
+											</label>
+										</div>
+										<div>
+											<label className="inline-flex items-center">
+												<input
+													type="checkbox"
+													className="form-checkbox h-6 w-6 border-2 border-gray-300"
+													disabled
+												/>
+												<span className="ml-2 text-gray-500 text-medium font-medium mb-2">
+													Medical
+												</span>
+											</label>
+										</div>
+										<div>
+											<label className="inline-flex items-center">
+												<input
+													type="checkbox"
+													className="form-checkbox h-6 w-6 border-2 border-gray-300"
+													disabled
+												/>
+												<span className="ml-2 text-gray-500 text-medium font-medium mb-2">
+													Others
+												</span>
+											</label>
+										</div>
+										<div className="block">
+											<input
+												type="text"
+												className={`${
+													this.state.others ? 'show' : 'hidden'
+												} form-input mt-1 block w-full border-2`}
+												placeholder="Please state your other needs"
+												disabled
+											/>
+										</div>
+									</div>
+								</div>
+								<div className="mb-4">
+									<label
+										className="block text-gray-700 text-sm font-bold mb-2"
+										htmlFor="contactNumber">
+										Open Google Maps
+									</label>
+									<a
+										target="_blank"
+										href={`https://www.google.com/maps/place/${this.state.userLocation[0]},${this.state.userLocation[1]}`}>
+										<img src={require('../components/Map/map.png')} />
+									</a>
+								</div>
+								<div className="flex items-center justify-between">
+									<button
+										onClick={this.toggleInfoModal}
+										className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+										Close
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					{/* Info Modal Ends */}
 					<Map
 						className={styles.homeMap}
 						center={this.state.userLocation}
-						zoom={15}>
-						{({ TileLayer, Marker, Popup }) => (
+						maxZoom={18}
+						zoom={this.state.mapZoom}>
+						{({ TileLayer, Marker, Popup }, icon, icon2, userIcon) => (
 							<>
 								<TileLayer
 									url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 									attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 								/>
-								<Marker position={this.state.userLocation}>
-									<Popup>
-										A pretty CSS3 popup. <br /> Easily customizable.
-										<a target="_blank" href="https://www.google.com">
-											Google
-										</a>
-									</Popup>
+								<Marker position={this.state.userLocation} icon={userIcon}>
+									<Popup>Your Location</Popup>
 								</Marker>
+								{points_need.map((marker, key) => (
+									<Marker
+										key={`marker-${key}`}
+										position={[marker[0], marker[1]]}
+										icon={icon}>
+										<Popup>
+											<button
+												onClick={() => this.toggleInfoModal(key)}
+												className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+												Open
+											</button>
+										</Popup>
+									</Marker>
+								))}
+								{points_give.map((marker, key) => (
+									<Marker
+										key={`marker-${key}`}
+										position={[marker[0], marker[1]]}
+										icon={icon2}>
+										<Popup>
+											<button
+												onClick={() => this.toggleInfoModal(key)}
+												className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+												Open
+											</button>
+										</Popup>
+									</Marker>
+								))}
 							</>
 						)}
 					</Map>

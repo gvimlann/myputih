@@ -27,7 +27,7 @@ function Navbar({
 						}}
 						href="#"
 						className={
-							'flex-1 block rounded-full bg-red-600 hover:bg-red-400 justify-center text-center p-5 mb-1'
+							'flex-1 block rounded-full bg-red-600 hover:bg-red-400 justify-center text-center p-5 mb-2'
 						}>
 						<span className={'block text-white text-lg'}>Need Help</span>
 					</a>
@@ -43,7 +43,7 @@ function Navbar({
 						}}
 						href="#"
 						className={
-							'flex-1 block rounded-full bg-green-600 hover:bg-green-400 justify-center text-center p-5 mb-1'
+							'flex-1 block rounded-full bg-green-600 hover:bg-green-400 justify-center text-center p-5 mb-2'
 						}>
 						<span className={'block text-white text-lg'}>Give Help</span>
 					</a>
