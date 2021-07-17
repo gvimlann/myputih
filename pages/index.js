@@ -8,23 +8,47 @@ import Navbar from '../components/Navbar';
 import Map from '../components/Map';
 import styles from '../styles/Home.module.css';
 import NumberFormat from 'react-number-format';
-import { points_need } from '../lib/mock-data/points_need';
-import { points_give } from '../lib/mock-data/points_give';
 
 const DEFAULT_CENTER = [4.175975, 102.120976];
 
-async function getData() {
+async function checkUserIfExists(user) {
 	axios
-		.get(`http://localhost:8080/api/hello`)
-		.then(function (response) {
-			// console.log(response.data);
+		.post(`/api/user/get`, {
+			email: user.email,
+			name: user.name,
 		})
-		.catch(function (error) {
-			// console.log(error);
+		.then((res) => {
+			// console.log(res);
 		});
-
-	return 0;
 }
+
+async function createOrUpdateData(user, state) {
+	axios
+		.post(`/api/info/createorupdate`, {
+			name: user.name,
+			email: user.email,
+			contactNumber: state.contactNumber,
+			food: state.food,
+			groceries: state.groceries,
+			money: state.money,
+			medical: state.medical,
+			others: state.others,
+			othersDetail: state.othersDetail,
+			needHelp: state.needHelp,
+			location: state.userLocation,
+			othersNeed: state.othersNeed,
+		})
+		.then((res) => {
+			// console.log(res);
+			// getAllInfo();
+		});
+}
+
+// async function getAllInfo() {
+// 	axios.get(`/api/info/get`).then((res) => {
+// 		return res.data;
+// 	});
+// }
 
 export default class Home extends React.Component {
 	constructor(props) {
@@ -32,7 +56,7 @@ export default class Home extends React.Component {
 		this.session = props.session;
 		this.state = {
 			username: props.session?.user.name,
-			contactNumber: 0,
+			contactNumber: '',
 			food: false,
 			groceries: false,
 			money: false,
@@ -43,17 +67,25 @@ export default class Home extends React.Component {
 			userLocation: DEFAULT_CENTER,
 			locationSwitchedOn: false,
 			mapZoom: 8,
+			allPointsInfo: [],
 		};
 		this.toggleModal.bind(this);
 		this.toggleInfoModal.bind(this);
 		this.sendOptionToParent.bind(this);
 		this.toggleErrorModal.bind(this);
 		this.handleSubmit.bind(this);
+		this.getAllInfo.bind(this);
 	}
 	// const [session, loading] = useSession();
 
 	sendOptionToParent = (data) => {
 		this.setState({ needHelp: data });
+	};
+
+	getAllInfo = async () => {
+		axios.get(`/api/info/get`).then((res) => {
+			this.setState({ allPointsInfo: res.data });
+		});
 	};
 
 	toggleModal = () => {
@@ -64,7 +96,7 @@ export default class Home extends React.Component {
 		// body.classList.toggle('modal-active');
 		this.setState({
 			username: this.session.user.name,
-			contactNumber: 0,
+			contactNumber: '',
 			food: false,
 			groceries: false,
 			money: false,
@@ -75,7 +107,7 @@ export default class Home extends React.Component {
 	};
 
 	toggleInfoModal = (props) => {
-		console.log(typeof props === 'number');
+		// console.log(typeof props === 'number');
 		const errorModal = document.querySelector('.info-modal');
 		errorModal.classList.toggle('opacity-0');
 		errorModal.classList.toggle('pointer-events-none');
@@ -92,7 +124,8 @@ export default class Home extends React.Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		this.toggleModal();
-		console.log('info: ', this.state);
+		createOrUpdateData(this.session.user, this.state);
+		// console.log('info: ', this.state);
 	};
 
 	componentDidMount() {
@@ -113,17 +146,13 @@ export default class Home extends React.Component {
 		);
 
 		// user is logged in
-		if (this.session?.user === undefined) {
-			let user = this.session?.user;
-			// axios
-			// 	.get(`http://localhost:8080/api/hello`)
-			// 	.then(function (response) {
-			// 		alert();
-			// 	})
-			// 	.catch(function (error) {
-			// 		console.log(error);
-			// 	});
-			getData();
+		if (this.session?.user !== undefined) {
+			let user = this.session.user;
+			checkUserIfExists(user);
+			this.getAllInfo();
+			// this.setState({ allPointsInfo: getAllInfo() });
+			// console.log('all info');
+			// console.log(this.state.allPointsInfo);
 		}
 	}
 
@@ -672,7 +701,7 @@ export default class Home extends React.Component {
 								<Marker position={this.state.userLocation} icon={userIcon}>
 									<Popup>Your Location</Popup>
 								</Marker>
-								{points_need.map((marker, key) => (
+								{/* {points_need.map((marker, key) => (
 									<Marker
 										key={`marker-${key}`}
 										position={[marker[0], marker[1]]}
@@ -685,21 +714,41 @@ export default class Home extends React.Component {
 											</button>
 										</Popup>
 									</Marker>
-								))}
-								{points_give.map((marker, key) => (
-									<Marker
-										key={`marker-${key}`}
-										position={[marker[0], marker[1]]}
-										icon={icon2}>
-										<Popup>
-											<button
-												onClick={() => this.toggleInfoModal(key)}
-												className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-												Open
-											</button>
-										</Popup>
-									</Marker>
-								))}
+								))} */}
+								{/* {console.log('allinfo')} */}
+								{this.state.allPointsInfo?.map((marker, key) => {
+									if (marker.needHelp) {
+										return (
+											<Marker
+												key={`marker-${key}`}
+												position={[marker.latitude, marker.longitude]}
+												icon={icon2}>
+												<Popup>
+													<button
+														onClick={() => this.toggleInfoModal(key)}
+														className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+														Open
+													</button>
+												</Popup>
+											</Marker>
+										);
+									} else {
+										return (
+											<Marker
+												key={`marker-${key}`}
+												position={[marker.latitude, marker.longitude]}
+												icon={icon}>
+												<Popup>
+													<button
+														onClick={() => this.toggleInfoModal(key)}
+														className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+														Open
+													</button>
+												</Popup>
+											</Marker>
+										);
+									}
+								})}
 							</>
 						)}
 					</Map>

@@ -6,7 +6,7 @@ module.exports =
 /******/ 	// object to store loaded chunks
 /******/ 	// "0" means "already loaded"
 /******/ 	var installedChunks = {
-/******/ 		8: 0
+/******/ 		10: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -49,7 +49,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("../" + ({}[chunkId]||chunkId) + "." + {"9":"dd08d52359a624ef94a3"}[chunkId] + ".js");
+/******/ 			var chunk = require("../" + ({}[chunkId]||chunkId) + "." + {"11":"fcd56c9ef16350bb93ac"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -133,7 +133,7 @@ module.exports = require("next/dynamic");
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("RNiq");
@@ -310,7 +310,7 @@ var dynamic_default = /*#__PURE__*/__webpack_require__.n(dynamic_);
 
 // CONCATENATED MODULE: ./components/Map/index.js
 
-const Map = dynamic_default()(() => __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, "j1/2")), {
+const Map = dynamic_default()(() => __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, "j1/2")), {
   ssr: false,
   loadableGenerated: {
     webpack: () => [/*require.resolve*/("j1/2")],
@@ -326,10 +326,6 @@ var Home_module_default = /*#__PURE__*/__webpack_require__.n(Home_module);
 var external_react_number_format_ = __webpack_require__("uM63");
 var external_react_number_format_default = /*#__PURE__*/__webpack_require__.n(external_react_number_format_);
 
-// CONCATENATED MODULE: ./lib/mock-data/points_need.js
-const points_need = [[-37.72842505, 175.2706335167, '17'], [-37.7282464667, 175.2706460833, '19'], [-37.7276605, 175.2706836667, '25'], [-37.7278661667, 175.2706627333, '23'], [-37.72806185, 175.2706538, '21'], [-37.7281040667, 175.27100185, '18'], [-37.7301143333, 175.2709216167, '1'], [-37.72792945, 175.2710214667, '20'], [-37.7282733167, 175.2709974667, '16'], [-37.7287839667, 175.2709957333, '14'], [-37.7265024833, 175.2713970167, '42'], [-37.7265954333, 175.2713280167, '40'], [-37.7267309167, 175.2712507167, '38'], [-37.7265228, 175.2709706, '39'], [-37.7268735333, 175.2711989, '36'], [-37.7266586333, 175.27090015, '37'], [-37.7259428667, 175.27139155, '45'], [-37.72604375, 175.2716834833, '46'], [-37.7274559833, 175.2707143833, '27'], [-37.7288465, 175.2706621167, '11'], [-37.7291982, 175.2710491333, '10'], [-37.7289922167, 175.2710028167, '12'], [-37.7292691667, 175.27073615, '7'], [-37.7294102167, 175.27113215, '8'], [-37.7290649167, 175.2706785167, '9'], [-37.7300301167, 175.271293, '4'], [-37.7286283833, 175.27063715, '15'], [-37.7254250167, 175.2720879167, '56'], [-37.7253125333, 175.2717429833, '53'], [-37.725191, 175.2718320333, '55']];
-// CONCATENATED MODULE: ./lib/mock-data/points_give.js
-const points_give = [[4.175975, 102.120976, '1'], [-37.78007645, 175.2206278667, '107'], [-37.7761792333, 175.2271736333, '24'], [-37.7776189167, 175.2258753, '44'], [-37.7760834167, 175.2275457833, '25'], [-37.7802256833, 175.22049075, '109'], [-37.7763597, 175.2271748833, '26'], [-37.77900305, 175.2214785, '93'], [-37.7762677667, 175.2275494833, '27'], [-37.7796043833, 175.220437, '100'], [-37.7765240667, 175.2271687667, '28'], [-37.7777572833, 175.2253957833, '48'], [-37.77644445, 175.2275392167, '29'], [-37.7789061333, 175.2216740833, '91'], [-37.77671675, 175.22710215, '30'], [-37.7779318833, 175.2260268, '43'], [-37.77659265, 175.2275279833, '31'], [-37.7776471833, 175.2236296833, '64'], [-37.77688305, 175.2270006, '32'], [-37.7783610333, 175.22232635, '78'], [-37.77738635, 175.2269281333, '33'], [-37.7776497, 175.2238384, '62'], [-37.777065, 175.2268381667, '34']];
 // CONCATENATED MODULE: ./pages/index.js
 
 
@@ -347,26 +343,57 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-
 const DEFAULT_CENTER = [4.175975, 102.120976];
 
-async function getData() {
-  external_axios_default.a.get(`http://localhost:8080/api/hello`).then(function (response) {// console.log(response.data);
-  }).catch(function (error) {// console.log(error);
+async function checkUserIfExists(user) {
+  external_axios_default.a.post(`/api/user/get`, {
+    email: user.email,
+    name: user.name
+  }).then(res => {// console.log(res);
   });
-  return 0;
 }
 
+async function createOrUpdateData(user, state) {
+  external_axios_default.a.post(`/api/info/createorupdate`, {
+    name: user.name,
+    email: user.email,
+    contactNumber: state.contactNumber,
+    food: state.food,
+    groceries: state.groceries,
+    money: state.money,
+    medical: state.medical,
+    others: state.others,
+    othersDetail: state.othersDetail,
+    needHelp: state.needHelp,
+    location: state.userLocation,
+    othersNeed: state.othersNeed
+  }).then(res => {// console.log(res);
+    // getAllInfo();
+  });
+} // async function getAllInfo() {
+// 	axios.get(`/api/info/get`).then((res) => {
+// 		return res.data;
+// 	});
+// }
+
+
 class pages_Home extends external_react_default.a.Component {
-  constructor(_props) {
+  constructor(props) {
     var _props$session;
 
-    super(_props);
+    super(props);
 
     _defineProperty(this, "sendOptionToParent", data => {
       this.setState({
         needHelp: data
+      });
+    });
+
+    _defineProperty(this, "getAllInfo", async () => {
+      external_axios_default.a.get(`/api/info/get`).then(res => {
+        this.setState({
+          allPointsInfo: res.data
+        });
       });
     });
 
@@ -378,7 +405,7 @@ class pages_Home extends external_react_default.a.Component {
 
       this.setState({
         username: this.session.user.name,
-        contactNumber: 0,
+        contactNumber: '',
         food: false,
         groceries: false,
         money: false,
@@ -389,7 +416,7 @@ class pages_Home extends external_react_default.a.Component {
     });
 
     _defineProperty(this, "toggleInfoModal", props => {
-      console.log(typeof props === 'number');
+      // console.log(typeof props === 'number');
       const errorModal = document.querySelector('.info-modal');
       errorModal.classList.toggle('opacity-0');
       errorModal.classList.toggle('pointer-events-none');
@@ -405,13 +432,14 @@ class pages_Home extends external_react_default.a.Component {
     _defineProperty(this, "handleSubmit", e => {
       e.preventDefault();
       this.toggleModal();
+      createOrUpdateData(this.session.user, this.state);
       console.log('info: ', this.state);
     });
 
-    this.session = _props.session;
+    this.session = props.session;
     this.state = {
-      username: (_props$session = _props.session) === null || _props$session === void 0 ? void 0 : _props$session.user.name,
-      contactNumber: 0,
+      username: (_props$session = props.session) === null || _props$session === void 0 ? void 0 : _props$session.user.name,
+      contactNumber: '',
       food: false,
       groceries: false,
       money: false,
@@ -421,13 +449,15 @@ class pages_Home extends external_react_default.a.Component {
       needHelp: false,
       userLocation: DEFAULT_CENTER,
       locationSwitchedOn: false,
-      mapZoom: 8
+      mapZoom: 8,
+      allPointsInfo: []
     };
     this.toggleModal.bind(this);
     this.toggleInfoModal.bind(this);
     this.sendOptionToParent.bind(this);
     this.toggleErrorModal.bind(this);
     this.handleSubmit.bind(this);
+    this.getAllInfo.bind(this);
   } // const [session, loading] = useSession();
 
 
@@ -455,24 +485,17 @@ class pages_Home extends external_react_default.a.Component {
       console.log('Location is off');
     }); // user is logged in
 
-    if (((_this$session = this.session) === null || _this$session === void 0 ? void 0 : _this$session.user) === undefined) {
-      var _this$session2;
-
-      let user = (_this$session2 = this.session) === null || _this$session2 === void 0 ? void 0 : _this$session2.user; // axios
-      // 	.get(`http://localhost:8080/api/hello`)
-      // 	.then(function (response) {
-      // 		alert();
-      // 	})
-      // 	.catch(function (error) {
-      // 		console.log(error);
-      // 	});
-
-      getData();
+    if (((_this$session = this.session) === null || _this$session === void 0 ? void 0 : _this$session.user) !== undefined) {
+      let user = this.session.user;
+      checkUserIfExists(user);
+      this.getAllInfo(); // this.setState({ allPointsInfo: getAllInfo() });
+      // console.log('all info');
+      // console.log(this.state.allPointsInfo);
     }
   }
 
   render() {
-    var _this$session3;
+    var _this$session2;
 
     return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(head_default.a, {
@@ -482,7 +505,7 @@ class pages_Home extends external_react_default.a.Component {
       }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("main", {
         children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Header, {
           signedIn: this.session,
-          username: (_this$session3 = this.session) === null || _this$session3 === void 0 ? void 0 : _this$session3.user.name,
+          username: (_this$session2 = this.session) === null || _this$session2 === void 0 ? void 0 : _this$session2.user.name,
           googleSignOut: client_["signOut"]
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Navbar, {
           signedIn: this.session,
@@ -1022,38 +1045,48 @@ class pages_Home extends external_react_default.a.Component {
             TileLayer,
             Marker,
             Popup
-          }, icon, icon2, userIcon) => /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
-            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(TileLayer, {
-              url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-              attribution: "\xA9 <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
-            }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
-              position: this.state.userLocation,
-              icon: userIcon,
-              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
-                children: "Your Location"
-              })
-            }), points_need.map((marker, key) => /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
-              position: [marker[0], marker[1]],
-              icon: icon,
-              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-                  onClick: () => this.toggleInfoModal(key),
-                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
-                  children: "Open"
+          }, icon, icon2, userIcon) => {
+            var _this$state$allPoints;
+
+            return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(TileLayer, {
+                url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                attribution: "\xA9 <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
+                position: this.state.userLocation,
+                icon: userIcon,
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
+                  children: "Your Location"
                 })
-              })
-            }, `marker-${key}`)), points_give.map((marker, key) => /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
-              position: [marker[0], marker[1]],
-              icon: icon2,
-              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
-                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-                  onClick: () => this.toggleInfoModal(key),
-                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
-                  children: "Open"
-                })
-              })
-            }, `marker-${key}`))]
-          })
+              }), (_this$state$allPoints = this.state.allPointsInfo) === null || _this$state$allPoints === void 0 ? void 0 : _this$state$allPoints.map((marker, key) => {
+                if (marker.needHelp) {
+                  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
+                    position: [marker.latitude, marker.longitude],
+                    icon: icon2,
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
+                      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                        onClick: () => this.toggleInfoModal(key),
+                        className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                        children: "Open"
+                      })
+                    })
+                  }, `marker-${key}`);
+                } else {
+                  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
+                    position: [marker.latitude, marker.longitude],
+                    icon: icon,
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Popup, {
+                      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                        onClick: () => this.toggleInfoModal(key),
+                        className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                        children: "Open"
+                      })
+                    })
+                  }, `marker-${key}`);
+                }
+              })]
+            });
+          }
         })]
       })]
     });
