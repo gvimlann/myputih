@@ -6,7 +6,7 @@ module.exports =
 /******/ 	// object to store loaded chunks
 /******/ 	// "0" means "already loaded"
 /******/ 	var installedChunks = {
-/******/ 		"pages/index": 0
+/******/ 		8: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -49,7 +49,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("../" + ({}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("../" + ({}[chunkId]||chunkId) + "." + {"9":"87fa6b26658d4d8f25aa"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -121,155 +121,818 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Header.js":
-/*!******************************!*\
-  !*** ./components/Header.js ***!
-  \******************************/
-/*! exports provided: default */
+/***/ "/T1H":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dynamic");
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("RNiq");
+
+
+/***/ }),
+
+/***/ "AuoD":
+/***/ (function(module, exports) {
+
+module.exports = require("react-leaflet");
+
+/***/ }),
+
+/***/ "F5FC":
+/***/ (function(module, exports) {
+
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "FctI":
+/***/ (function(module, exports) {
+
+module.exports = require("next-auth/client");
+
+/***/ }),
+
+/***/ "M1sZ":
+/***/ (function(module, exports) {
+
+module.exports = require("@heroicons/react/outline");
+
+/***/ }),
+
+/***/ "RNiq":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nvar _jsxFileName = \"/Users/gvimlan/Documents/MyPutih-Site/myputih/components/Header.js\";\n\nfunction Header({\n  signedIn,\n  googleSignOut,\n  username\n}) {\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    className: 'sticky top-0 z-50 mb-2 bg-gray-200 flex items-center justify-between p-2 lg:px-5 shadow-md',\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"h1\", {\n      className: 'text-2xl',\n      children: \"MyPutih\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 7,\n      columnNumber: 4\n    }, this), signedIn && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: \"flex items-center\",\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"h1\", {\n        className: \"text-md mr-5\",\n        children: [\"Hey, \", username]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 11,\n        columnNumber: 6\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n        onClick: googleSignOut,\n        className: \"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline\",\n        type: \"button\",\n        children: \"Sign Out\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 12,\n        columnNumber: 6\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 10,\n      columnNumber: 5\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 3,\n    columnNumber: 3\n  }, this);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL0hlYWRlci5qcz82ZjRhIl0sIm5hbWVzIjpbIkhlYWRlciIsInNpZ25lZEluIiwiZ29vZ2xlU2lnbk91dCIsInVzZXJuYW1lIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxTQUFTQSxNQUFULENBQWdCO0FBQUVDLFVBQUY7QUFBWUMsZUFBWjtBQUEyQkM7QUFBM0IsQ0FBaEIsRUFBdUQ7QUFDdEQsc0JBQ0M7QUFDQyxhQUFTLEVBQ1IsNEZBRkY7QUFBQSw0QkFJQztBQUFJLGVBQVMsRUFBRSxVQUFmO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBSkQsRUFNRUYsUUFBUSxpQkFDUjtBQUFLLGVBQVMsRUFBQyxtQkFBZjtBQUFBLDhCQUNDO0FBQUksaUJBQVMsRUFBQyxjQUFkO0FBQUEsNEJBQW1DRSxRQUFuQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FERCxlQUVDO0FBQ0MsZUFBTyxFQUFFRCxhQURWO0FBRUMsaUJBQVMsRUFBQyw4R0FGWDtBQUdDLFlBQUksRUFBQyxRQUhOO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBRkQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBUEY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBREQ7QUFvQkE7O0FBRWNGLHFFQUFmIiwiZmlsZSI6Ii4vY29tcG9uZW50cy9IZWFkZXIuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJmdW5jdGlvbiBIZWFkZXIoeyBzaWduZWRJbiwgZ29vZ2xlU2lnbk91dCwgdXNlcm5hbWUgfSkge1xuXHRyZXR1cm4gKFxuXHRcdDxkaXZcblx0XHRcdGNsYXNzTmFtZT17XG5cdFx0XHRcdCdzdGlja3kgdG9wLTAgei01MCBtYi0yIGJnLWdyYXktMjAwIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBwLTIgbGc6cHgtNSBzaGFkb3ctbWQnXG5cdFx0XHR9PlxuXHRcdFx0PGgxIGNsYXNzTmFtZT17J3RleHQtMnhsJ30+TXlQdXRpaDwvaDE+XG5cblx0XHRcdHtzaWduZWRJbiAmJiAoXG5cdFx0XHRcdDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXJcIj5cblx0XHRcdFx0XHQ8aDEgY2xhc3NOYW1lPVwidGV4dC1tZCBtci01XCI+SGV5LCB7dXNlcm5hbWV9PC9oMT5cblx0XHRcdFx0XHQ8YnV0dG9uXG5cdFx0XHRcdFx0XHRvbkNsaWNrPXtnb29nbGVTaWduT3V0fVxuXHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiYmctYmx1ZS01MDAgaG92ZXI6YmctYmx1ZS03MDAgdGV4dC13aGl0ZSBmb250LWJvbGQgcHktMiBweC00IHJvdW5kZWQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnNoYWRvdy1vdXRsaW5lXCJcblx0XHRcdFx0XHRcdHR5cGU9XCJidXR0b25cIj5cblx0XHRcdFx0XHRcdFNpZ24gT3V0XG5cdFx0XHRcdFx0PC9idXR0b24+XG5cdFx0XHRcdDwvZGl2PlxuXHRcdFx0KX1cblx0XHQ8L2Rpdj5cblx0KTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgSGVhZGVyO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/Header.js\n");
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ pages_Home; });
+__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__("F5FC");
+
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "@heroicons/react/outline"
+var outline_ = __webpack_require__("M1sZ");
+
+// EXTERNAL MODULE: external "next-auth/client"
+var client_ = __webpack_require__("FctI");
+
+// EXTERNAL MODULE: external "axios"
+var external_axios_ = __webpack_require__("zr5I");
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
+
+// CONCATENATED MODULE: ./components/Header.js
+
+
+
+function Header({
+  signedIn,
+  googleSignOut,
+  username
+}) {
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+    className: 'sticky top-0 z-50 mb-2 bg-gray-200 flex items-center justify-between p-2 lg:px-5 shadow-md',
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("h1", {
+      className: 'text-2xl',
+      children: "MyPutih App"
+    }), signedIn && /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+      className: "flex items-center",
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("h1", {
+        className: "text-md mr-5",
+        children: ["Hey, ", username]
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+        onClick: googleSignOut,
+        className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+        type: "button",
+        children: "Sign Out"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ var components_Header = (Header);
+// CONCATENATED MODULE: ./components/Navbar.js
+
+
+
+function Navbar({
+  signedIn,
+  googleSignIn,
+  toggleModal,
+  toggleErrorModal,
+  sendDataToParent,
+  locationSwitchedOn
+}) {
+  const isActive = true;
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+    className: `${isActive ? 'show ' : 'hidden '}block fixed inset-x-0 bottom-0 z-50 shadow`,
+    children: [signedIn && /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+      className: 'flex space-x-4 justify-between',
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+        onClick: () => {
+          // console.log('location switch on: ', locationSwitchedOn);
+          if (locationSwitchedOn) {
+            sendDataToParent(true);
+            toggleModal();
+          } else {
+            toggleErrorModal();
+          }
+        },
+        href: "#",
+        className: 'flex-1 block rounded-full bg-red-600 hover:bg-red-400 justify-center text-center p-5 mb-1',
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+          className: 'block text-white text-lg',
+          children: "Need Help"
+        })
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+        onClick: () => {
+          // console.log('location switch on: ', locationSwitchedOn);
+          if (locationSwitchedOn) {
+            sendDataToParent(false);
+            toggleModal();
+          } else {
+            toggleErrorModal();
+          }
+        },
+        href: "#",
+        className: 'flex-1 block rounded-full bg-green-600 hover:bg-green-400 justify-center text-center p-5 mb-1',
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+          className: 'block text-white text-lg',
+          children: "Give Help"
+        })
+      })]
+    }), !signedIn && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      className: 'flex space-x-4 justify-between',
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+        onClick: () => googleSignIn(),
+        href: "#",
+        className: 'flex-1 block rounded-full bg-red-500 hover:bg-red-300 justify-center text-center p-5 mb-1',
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+          className: 'block text-white text-lg',
+          children: "Sign In With Google"
+        })
+      })
+    })]
+  });
+}
+
+/* harmony default export */ var components_Navbar = (Navbar);
+// EXTERNAL MODULE: external "next/dynamic"
+var dynamic_ = __webpack_require__("/T1H");
+var dynamic_default = /*#__PURE__*/__webpack_require__.n(dynamic_);
+
+// CONCATENATED MODULE: ./components/Map/index.js
+
+const Map = dynamic_default()(() => __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, "j1/2")), {
+  ssr: false,
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/("j1/2")],
+    modules: ['./Map']
+  }
+});
+/* harmony default export */ var components_Map = (Map);
+// EXTERNAL MODULE: ./styles/Home.module.css
+var Home_module = __webpack_require__("vRNQ");
+var Home_module_default = /*#__PURE__*/__webpack_require__.n(Home_module);
+
+// EXTERNAL MODULE: external "react-number-format"
+var external_react_number_format_ = __webpack_require__("uM63");
+var external_react_number_format_default = /*#__PURE__*/__webpack_require__.n(external_react_number_format_);
+
+// CONCATENATED MODULE: ./pages/index.js
+
+
+
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+
+const DEFAULT_CENTER = [3.315834, 101.559201];
+
+async function getData() {
+  external_axios_default.a.get(`http://localhost:8080/api/hello`).then(function (response) {// console.log(response.data);
+  }).catch(function (error) {// console.log(error);
+  });
+  return 0;
+}
+
+class pages_Home extends external_react_default.a.Component {
+  constructor(props) {
+    var _props$session;
+
+    super(props);
+
+    _defineProperty(this, "sendOptionToParent", data => {
+      this.setState({
+        needHelp: data
+      });
+    });
+
+    _defineProperty(this, "toggleModal", () => {
+      // const body = document.querySelector('body');
+      const modal = document.querySelector('.modal');
+      modal.classList.toggle('opacity-0');
+      modal.classList.toggle('pointer-events-none'); // body.classList.toggle('modal-active');
+
+      this.setState({
+        username: this.session.user.name,
+        contactNumber: 0,
+        food: false,
+        groceries: false,
+        money: false,
+        medical: false,
+        others: false,
+        othersDetail: ''
+      });
+    });
+
+    _defineProperty(this, "toggleErrorModal", () => {
+      // const body = document.querySelector('body');
+      const errorModal = document.querySelector('.error-modal');
+      errorModal.classList.toggle('opacity-0');
+      errorModal.classList.toggle('pointer-events-none'); // body.classList.toggle('modal-active');
+    });
+
+    _defineProperty(this, "handleSubmit", e => {
+      e.preventDefault();
+      this.toggleModal();
+      console.log('info: ', this.state);
+    });
+
+    this.session = props.session;
+    this.state = {
+      username: (_props$session = props.session) === null || _props$session === void 0 ? void 0 : _props$session.user.name,
+      contactNumber: 0,
+      food: false,
+      groceries: false,
+      money: false,
+      medical: false,
+      others: false,
+      othersDetail: '',
+      needHelp: false,
+      userLocation: [0, 0],
+      locationSwitchedOn: false
+    };
+    this.toggleModal.bind(this);
+    this.sendOptionToParent.bind(this);
+    this.toggleErrorModal.bind(this);
+    this.handleSubmit.bind(this);
+  } // const [session, loading] = useSession();
+
+
+  componentDidMount() {
+    var _this$session;
+
+    navigator.geolocation.getCurrentPosition(position => {
+      this.setState({
+        userLocation: [position.coords.latitude, position.coords.longitude]
+      });
+      this.setState({
+        locationSwitchedOn: true
+      });
+      console.log('Location is on');
+    }, error => {
+      this.setState({
+        error: "We can't get your location!"
+      });
+      this.setState({
+        locationSwitchedOn: false
+      });
+      console.log('Location is off');
+    }); // user is logged in
+
+    if (((_this$session = this.session) === null || _this$session === void 0 ? void 0 : _this$session.user) === undefined) {
+      var _this$session2;
+
+      let user = (_this$session2 = this.session) === null || _this$session2 === void 0 ? void 0 : _this$session2.user; // axios
+      // 	.get(`http://localhost:8080/api/hello`)
+      // 	.then(function (response) {
+      // 		alert();
+      // 	})
+      // 	.catch(function (error) {
+      // 		console.log(error);
+      // 	});
+
+      getData();
+    }
+  }
+
+  render() {
+    var _this$session3;
+
+    return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(head_default.a, {
+        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("title", {
+          children: "MyPutih"
+        })
+      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("main", {
+        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Header, {
+          signedIn: this.session,
+          username: (_this$session3 = this.session) === null || _this$session3 === void 0 ? void 0 : _this$session3.user.name,
+          googleSignOut: client_["signOut"]
+        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Navbar, {
+          signedIn: this.session,
+          googleSignIn: client_["signIn"],
+          toggleModal: this.toggleModal,
+          toggleErrorModal: this.toggleErrorModal,
+          sendDataToParent: this.sendOptionToParent,
+          locationSwitchedOn: this.state.locationSwitchedOn
+        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+          className: "error-modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center",
+          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+            onClick: this.toggleErrorModal,
+            className: "modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+            className: "modal-container bg-white md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto w-full max-w-xs p-5",
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+              className: "flex justify-between items-center p-2 ml-2 mr-2",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                className: "text-2xl font-bold",
+                children: "Location Not Found"
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                onClick: this.toggleErrorModal,
+                className: "modal-close cursor-pointer z-50",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(outline_["XIcon"], {
+                  className: "w-5 h-5"
+                })
+              })]
+            }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("h1", {
+              children: "Please switch on your location to access these features"
+            })]
+          })]
+        }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+          className: "modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center",
+          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+            onClick: this.toggleModal,
+            className: "modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+            className: "modal-container bg-white md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto w-full max-w-xs",
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+              className: "flex justify-between items-center p-2 ml-2 mr-2",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                className: "text-2xl font-bold",
+                children: this.state.needHelp ? 'Need Help' : 'Give Help'
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                onClick: this.toggleModal,
+                className: "modal-close cursor-pointer z-50",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(outline_["XIcon"], {
+                  className: "w-5 h-5"
+                })
+              })]
+            }), this.state.needHelp && /*#__PURE__*/Object(jsx_runtime_["jsxs"])("form", {
+              onSubmit: this.handleSubmit,
+              className: "bg-white shadow-md rounded px-8 pt-6 pb-8",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "name",
+                  children: "Name"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                  className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                  id: "name",
+                  type: "text",
+                  value: this.state.username,
+                  placeholder: "Your Name",
+                  onChange: e => {
+                    console.log('name: ', e.target.value);
+                    this.setState({
+                      username: e.target.value
+                    });
+                  }
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "Contact Number"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                  className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                  id: "contactNumber",
+                  type: "number",
+                  value: this.state.contactNumber,
+                  placeholder: "Your Contact Number",
+                  onChange: e => this.setState({
+                    contactNumber: e.target.value
+                  })
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "What Do You Need"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                  className: "mt-2",
+                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            food: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Food"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            groceries: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Groceries"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            money: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Money"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            medical: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Medical"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            others: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Others"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                      type: "text",
+                      className: `${this.state.others ? 'show' : 'hidden'} form-input mt-1 block w-full border-2`,
+                      placeholder: "Please state your other needs",
+                      onChange: e => {
+                        this.setState({
+                          othersDetail: e.target.value
+                        });
+                      }
+                    })
+                  })]
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "coordinates",
+                  children: "Your Coordinates"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                  className: "block text-gray-500 text-sm font-medium mb-2",
+                  htmlFor: "coordinates",
+                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_number_format_default.a, {
+                    value: this.state.userLocation[0],
+                    displayType: 'text',
+                    decimalScale: 5
+                  }), ` , `, /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_number_format_default.a, {
+                    value: this.state.userLocation[1],
+                    displayType: 'text',
+                    decimalScale: 5
+                  })]
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                className: "flex items-center justify-between",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  type: "submit",
+                  children: "Submit"
+                })
+              })]
+            }), !this.state.needHelp && /*#__PURE__*/Object(jsx_runtime_["jsxs"])("form", {
+              onSubmit: this.handleSubmit,
+              className: "bg-white shadow-md rounded px-8 pt-6 pb-8",
+              children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "name",
+                  children: "Name"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                  className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                  id: "name",
+                  type: "text",
+                  value: this.state.username,
+                  placeholder: "Your Name",
+                  onChange: e => {
+                    this.setState({
+                      username: e.target.value
+                    });
+                  }
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "Contact Number"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                  className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                  id: "contactNumber",
+                  type: "number",
+                  value: this.state.contactNumber,
+                  placeholder: "Your Contact Number",
+                  onChange: e => this.setState({
+                    contactNumber: e.target.value
+                  })
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "contactNumber",
+                  children: "What Do You Offer"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                  className: "mt-2",
+                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            food: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Food"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            groceries: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Groceries"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            money: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Money"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            medical: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Medical"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                      className: "inline-flex items-center",
+                      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                        type: "checkbox",
+                        className: "form-checkbox h-6 w-6 border-2 border-gray-300",
+                        onChange: e => {
+                          this.setState({
+                            others: e.target.checked
+                          });
+                        }
+                      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+                        className: "ml-2",
+                        children: "Others"
+                      })]
+                    })
+                  }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
+                      type: "text",
+                      className: `${this.state.others ? 'show' : 'hidden'} form-input mt-1 block w-full border-2`,
+                      placeholder: "Please state other things you are helping with",
+                      onChange: e => {
+                        this.setState({
+                          othersDetail: e.target.value
+                        });
+                      }
+                    })
+                  })]
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+                className: "mb-4",
+                children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("label", {
+                  className: "block text-gray-700 text-sm font-bold mb-2",
+                  htmlFor: "coordinates",
+                  children: "Your Coordinates"
+                }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("label", {
+                  className: "block text-gray-500 text-sm font-medium mb-2",
+                  htmlFor: "coordinates",
+                  children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_number_format_default.a, {
+                    value: this.state.userLocation[0],
+                    displayType: 'text',
+                    decimalScale: 5
+                  }), ` , `, /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_number_format_default.a, {
+                    value: this.state.userLocation[1],
+                    displayType: 'text',
+                    decimalScale: 5
+                  })]
+                })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+                className: "flex items-center justify-between",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
+                  className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+                  type: "submit",
+                  children: "Submit"
+                })
+              })]
+            })]
+          })]
+        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_Map, {
+          className: Home_module_default.a.homeMap,
+          center: this.state.userLocation,
+          zoom: 15,
+          children: ({
+            TileLayer,
+            Marker,
+            Popup
+          }) => /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(TileLayer, {
+              url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              attribution: "\xA9 <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
+            }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Marker, {
+              position: this.state.userLocation,
+              children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(Popup, {
+                children: ["A pretty CSS3 popup. ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), " Easily customizable.", /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+                  target: "_blank",
+                  href: "https://www.google.com",
+                  children: "Google"
+                })]
+              })
+            })]
+          })
+        })]
+      })]
+    });
+  }
+
+}
+const getServerSideProps = async context => {
+  const session = await Object(client_["getSession"])(context);
+  return {
+    props: {
+      session
+    }
+  };
+};
 
 /***/ }),
 
-/***/ "./components/Map/index.js":
-/*!*********************************!*\
-  !*** ./components/Map/index.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dynamic */ \"next/dynamic\");\n/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Map = next_dynamic__WEBPACK_IMPORTED_MODULE_0___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./Map */ \"./components/Map/Map.js\")), {\n  ssr: false,\n  loadableGenerated: {\n    webpack: () => [/*require.resolve*/(/*! ./Map */ \"./components/Map/Map.js\")],\n    modules: ['./Map']\n  }\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (Map);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL01hcC9pbmRleC5qcz8wNjVmIl0sIm5hbWVzIjpbIk1hcCIsImR5bmFtaWMiLCJzc3IiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRUEsTUFBTUEsR0FBRyxHQUFHQyxtREFBTyxDQUFDLE1BQU0scUhBQVAsRUFBd0I7QUFDekNDLEtBQUcsRUFBRSxLQURvQztBQUFBO0FBQUEsd0NBQVYsc0NBQVU7QUFBQSxjQUFWLE9BQVU7QUFBQTtBQUFBLENBQXhCLENBQW5CO0FBSWVGLGtFQUFmIiwiZmlsZSI6Ii4vY29tcG9uZW50cy9NYXAvaW5kZXguanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZHluYW1pYyBmcm9tICduZXh0L2R5bmFtaWMnO1xuXG5jb25zdCBNYXAgPSBkeW5hbWljKCgpID0+IGltcG9ydCgnLi9NYXAnKSwge1xuICBzc3I6IGZhbHNlXG59KTtcblxuZXhwb3J0IGRlZmF1bHQgTWFwOyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Map/index.js\n");
-
-/***/ }),
-
-/***/ "./components/Navbar.js":
-/*!******************************!*\
-  !*** ./components/Navbar.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nvar _jsxFileName = \"/Users/gvimlan/Documents/MyPutih-Site/myputih/components/Navbar.js\";\n\nfunction Navbar({\n  signedIn,\n  googleSignIn,\n  toggleModal,\n  sendDataToParent\n}) {\n  const isActive = true;\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    className: `${isActive ? 'show ' : 'hidden '}block fixed inset-x-0 bottom-0 z-50 shadow`,\n    children: [signedIn && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: 'flex space-x-4 justify-between',\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"a\", {\n        onClick: () => {\n          sendDataToParent(true);\n          toggleModal();\n        },\n        href: \"#\",\n        className: 'flex-1 block rounded-full bg-red-600 hover:bg-red-400 justify-center text-center p-5 mb-1',\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          className: 'block text-white text-lg',\n          children: \"Need Help\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 20,\n          columnNumber: 7\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 11,\n        columnNumber: 6\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"a\", {\n        onClick: () => {\n          sendDataToParent(false);\n          toggleModal();\n        },\n        href: \"#\",\n        className: 'flex-1 block rounded-full bg-green-600 hover:bg-green-400 justify-center text-center p-5 mb-1',\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          className: 'block text-white text-lg',\n          children: \"Give Help\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 31,\n          columnNumber: 7\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 22,\n        columnNumber: 6\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"a\", {\n        href: \"#\",\n        className: 'flex-1 block rounded-full bg-gray-600 hover:bg-gray-400 justify-center text-center p-5 mb-1',\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          className: 'block text-white text-lg',\n          children: \"NGO\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 38,\n          columnNumber: 7\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 33,\n        columnNumber: 6\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 10,\n      columnNumber: 5\n    }, this), !signedIn && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: 'flex space-x-4 justify-between',\n      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"a\", {\n        onClick: () => googleSignIn(),\n        href: \"#\",\n        className: 'flex-1 block rounded-full bg-red-500 hover:bg-red-300 justify-center text-center p-5 mb-1',\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          className: 'block text-white text-lg',\n          children: \"Sign In With Google\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 50,\n          columnNumber: 7\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 44,\n        columnNumber: 6\n      }, this)\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 43,\n      columnNumber: 5\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 5,\n    columnNumber: 3\n  }, this);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Navbar);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL05hdmJhci5qcz9jZDgyIl0sIm5hbWVzIjpbIk5hdmJhciIsInNpZ25lZEluIiwiZ29vZ2xlU2lnbkluIiwidG9nZ2xlTW9kYWwiLCJzZW5kRGF0YVRvUGFyZW50IiwiaXNBY3RpdmUiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLFNBQVNBLE1BQVQsQ0FBZ0I7QUFBRUMsVUFBRjtBQUFZQyxjQUFaO0FBQTBCQyxhQUExQjtBQUF1Q0M7QUFBdkMsQ0FBaEIsRUFBMkU7QUFDMUUsUUFBTUMsUUFBUSxHQUFHLElBQWpCO0FBRUEsc0JBQ0M7QUFDQyxhQUFTLEVBQUcsR0FDWEEsUUFBUSxHQUFHLE9BQUgsR0FBYSxTQUNyQiw0Q0FIRjtBQUFBLGVBSUVKLFFBQVEsaUJBQ1I7QUFBSyxlQUFTLEVBQUUsZ0NBQWhCO0FBQUEsOEJBQ0M7QUFDQyxlQUFPLEVBQUUsTUFBTTtBQUNkRywwQkFBZ0IsQ0FBQyxJQUFELENBQWhCO0FBQ0FELHFCQUFXO0FBQ1gsU0FKRjtBQUtDLFlBQUksRUFBQyxHQUxOO0FBTUMsaUJBQVMsRUFDUiwyRkFQRjtBQUFBLCtCQVNDO0FBQU0sbUJBQVMsRUFBRSwwQkFBakI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFURDtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBREQsZUFZQztBQUNDLGVBQU8sRUFBRSxNQUFNO0FBQ2RDLDBCQUFnQixDQUFDLEtBQUQsQ0FBaEI7QUFDQUQscUJBQVc7QUFDWCxTQUpGO0FBS0MsWUFBSSxFQUFDLEdBTE47QUFNQyxpQkFBUyxFQUNSLCtGQVBGO0FBQUEsK0JBU0M7QUFBTSxtQkFBUyxFQUFFLDBCQUFqQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQVREO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FaRCxlQXVCQztBQUNDLFlBQUksRUFBQyxHQUROO0FBRUMsaUJBQVMsRUFDUiw2RkFIRjtBQUFBLCtCQUtDO0FBQU0sbUJBQVMsRUFBRSwwQkFBakI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFMRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBdkJEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUxGLEVBcUNFLENBQUNGLFFBQUQsaUJBQ0E7QUFBSyxlQUFTLEVBQUUsZ0NBQWhCO0FBQUEsNkJBQ0M7QUFDQyxlQUFPLEVBQUUsTUFBTUMsWUFBWSxFQUQ1QjtBQUVDLFlBQUksRUFBQyxHQUZOO0FBR0MsaUJBQVMsRUFDUiwyRkFKRjtBQUFBLCtCQU1DO0FBQU0sbUJBQVMsRUFBRSwwQkFBakI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFORDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBREQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQXRDRjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsVUFERDtBQXNEQTs7QUFFY0YscUVBQWYiLCJmaWxlIjoiLi9jb21wb25lbnRzL05hdmJhci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIE5hdmJhcih7IHNpZ25lZEluLCBnb29nbGVTaWduSW4sIHRvZ2dsZU1vZGFsLCBzZW5kRGF0YVRvUGFyZW50IH0pIHtcblx0Y29uc3QgaXNBY3RpdmUgPSB0cnVlO1xuXG5cdHJldHVybiAoXG5cdFx0PGRpdlxuXHRcdFx0Y2xhc3NOYW1lPXtgJHtcblx0XHRcdFx0aXNBY3RpdmUgPyAnc2hvdyAnIDogJ2hpZGRlbiAnXG5cdFx0XHR9YmxvY2sgZml4ZWQgaW5zZXQteC0wIGJvdHRvbS0wIHotNTAgc2hhZG93YH0+XG5cdFx0XHR7c2lnbmVkSW4gJiYgKFxuXHRcdFx0XHQ8ZGl2IGNsYXNzTmFtZT17J2ZsZXggc3BhY2UteC00IGp1c3RpZnktYmV0d2Vlbid9PlxuXHRcdFx0XHRcdDxhXG5cdFx0XHRcdFx0XHRvbkNsaWNrPXsoKSA9PiB7XG5cdFx0XHRcdFx0XHRcdHNlbmREYXRhVG9QYXJlbnQodHJ1ZSk7XG5cdFx0XHRcdFx0XHRcdHRvZ2dsZU1vZGFsKCk7XG5cdFx0XHRcdFx0XHR9fVxuXHRcdFx0XHRcdFx0aHJlZj1cIiNcIlxuXHRcdFx0XHRcdFx0Y2xhc3NOYW1lPXtcblx0XHRcdFx0XHRcdFx0J2ZsZXgtMSBibG9jayByb3VuZGVkLWZ1bGwgYmctcmVkLTYwMCBob3ZlcjpiZy1yZWQtNDAwIGp1c3RpZnktY2VudGVyIHRleHQtY2VudGVyIHAtNSBtYi0xJ1xuXHRcdFx0XHRcdFx0fT5cblx0XHRcdFx0XHRcdDxzcGFuIGNsYXNzTmFtZT17J2Jsb2NrIHRleHQtd2hpdGUgdGV4dC1sZyd9Pk5lZWQgSGVscDwvc3Bhbj5cblx0XHRcdFx0XHQ8L2E+XG5cdFx0XHRcdFx0PGFcblx0XHRcdFx0XHRcdG9uQ2xpY2s9eygpID0+IHtcblx0XHRcdFx0XHRcdFx0c2VuZERhdGFUb1BhcmVudChmYWxzZSk7XG5cdFx0XHRcdFx0XHRcdHRvZ2dsZU1vZGFsKCk7XG5cdFx0XHRcdFx0XHR9fVxuXHRcdFx0XHRcdFx0aHJlZj1cIiNcIlxuXHRcdFx0XHRcdFx0Y2xhc3NOYW1lPXtcblx0XHRcdFx0XHRcdFx0J2ZsZXgtMSBibG9jayByb3VuZGVkLWZ1bGwgYmctZ3JlZW4tNjAwIGhvdmVyOmJnLWdyZWVuLTQwMCBqdXN0aWZ5LWNlbnRlciB0ZXh0LWNlbnRlciBwLTUgbWItMSdcblx0XHRcdFx0XHRcdH0+XG5cdFx0XHRcdFx0XHQ8c3BhbiBjbGFzc05hbWU9eydibG9jayB0ZXh0LXdoaXRlIHRleHQtbGcnfT5HaXZlIEhlbHA8L3NwYW4+XG5cdFx0XHRcdFx0PC9hPlxuXHRcdFx0XHRcdDxhXG5cdFx0XHRcdFx0XHRocmVmPVwiI1wiXG5cdFx0XHRcdFx0XHRjbGFzc05hbWU9e1xuXHRcdFx0XHRcdFx0XHQnZmxleC0xIGJsb2NrIHJvdW5kZWQtZnVsbCBiZy1ncmF5LTYwMCBob3ZlcjpiZy1ncmF5LTQwMCBqdXN0aWZ5LWNlbnRlciB0ZXh0LWNlbnRlciBwLTUgbWItMSdcblx0XHRcdFx0XHRcdH0+XG5cdFx0XHRcdFx0XHQ8c3BhbiBjbGFzc05hbWU9eydibG9jayB0ZXh0LXdoaXRlIHRleHQtbGcnfT5OR088L3NwYW4+XG5cdFx0XHRcdFx0PC9hPlxuXHRcdFx0XHQ8L2Rpdj5cblx0XHRcdCl9XG5cdFx0XHR7IXNpZ25lZEluICYmIChcblx0XHRcdFx0PGRpdiBjbGFzc05hbWU9eydmbGV4IHNwYWNlLXgtNCBqdXN0aWZ5LWJldHdlZW4nfT5cblx0XHRcdFx0XHQ8YVxuXHRcdFx0XHRcdFx0b25DbGljaz17KCkgPT4gZ29vZ2xlU2lnbkluKCl9XG5cdFx0XHRcdFx0XHRocmVmPVwiI1wiXG5cdFx0XHRcdFx0XHRjbGFzc05hbWU9e1xuXHRcdFx0XHRcdFx0XHQnZmxleC0xIGJsb2NrIHJvdW5kZWQtZnVsbCBiZy1yZWQtNTAwIGhvdmVyOmJnLXJlZC0zMDAganVzdGlmeS1jZW50ZXIgdGV4dC1jZW50ZXIgcC01IG1iLTEnXG5cdFx0XHRcdFx0XHR9PlxuXHRcdFx0XHRcdFx0PHNwYW4gY2xhc3NOYW1lPXsnYmxvY2sgdGV4dC13aGl0ZSB0ZXh0LWxnJ30+XG5cdFx0XHRcdFx0XHRcdFNpZ24gSW4gV2l0aCBHb29nbGVcblx0XHRcdFx0XHRcdDwvc3Bhbj5cblx0XHRcdFx0XHQ8L2E+XG5cdFx0XHRcdDwvZGl2PlxuXHRcdFx0KX1cblx0XHQ8L2Rpdj5cblx0KTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgTmF2YmFyO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/Navbar.js\n");
-
-/***/ }),
-
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
-/*! exports provided: default, getServerSideProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Home; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getServerSideProps\", function() { return getServerSideProps; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/outline */ \"@heroicons/react/outline\");\n/* harmony import */ var _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var next_auth_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-auth/client */ \"next-auth/client\");\n/* harmony import */ var next_auth_client__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_auth_client__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Header */ \"./components/Header.js\");\n/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Navbar */ \"./components/Navbar.js\");\n/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Map */ \"./components/Map/index.js\");\n/* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/Home.module.css */ \"./styles/Home.module.css\");\n/* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_8__);\n\n\nvar _jsxFileName = \"/Users/gvimlan/Documents/MyPutih-Site/myputih/pages/index.js\";\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n\n\n\n\nconst DEFAULT_CENTER = [3.315834, 101.559201];\nfunction Home({\n  session\n}) {\n  const {\n    0: needHelp,\n    1: setNeedHelp\n  } = Object(react__WEBPACK_IMPORTED_MODULE_2__[\"useState\"])();\n  const {\n    0: userLocation,\n    1: setUserLocation\n  } = Object(react__WEBPACK_IMPORTED_MODULE_2__[\"useState\"])([0, 0]);\n  const {\n    0: info,\n    1: setInfo\n  } = Object(react__WEBPACK_IMPORTED_MODULE_2__[\"useState\"])({\n    username: session.user.name,\n    contactNumber: 0,\n    food: false,\n    groceries: false,\n    money: false,\n    medical: false,\n    others: false,\n    othersDetail: ''\n  }); // const [session, loading] = useSession();\n\n  function toggleModal() {\n    // const body = document.querySelector('body');\n    const modal = document.querySelector('.modal');\n    modal.classList.toggle('opacity-0');\n    modal.classList.toggle('pointer-events-none'); // body.classList.toggle('modal-active');\n\n    setInfo({\n      username: session.user.name,\n      contactNumber: 0,\n      food: false,\n      groceries: false,\n      money: false,\n      medical: false,\n      others: false,\n      othersDetail: ''\n    });\n  }\n\n  const handleSubmit = e => {\n    e.preventDefault();\n    console.log('info: ', info);\n    toggleModal();\n  };\n\n  const sendOptionToParent = needHelp => {\n    // the callback. Use a better name\n    setNeedHelp(needHelp);\n  };\n\n  Object(react__WEBPACK_IMPORTED_MODULE_2__[\"useEffect\"])(() => {\n    if ('geolocation' in navigator) {\n      navigator.geolocation.getCurrentPosition(function (position) {\n        console.log({\n          lat: position.coords.latitude,\n          lng: position.coords.longitude\n        });\n        setUserLocation([position.coords.latitude, position.coords.longitude]);\n      });\n    }\n  }, []); // useEffect(() => {\n  // var openmodal = document.querySelectorAll('.modal-open');\n  // for (var i = 0; i < openmodal.length; i++) {\n  // \topenmodal[i].addEventListener('click', function (event) {\n  // \t\tevent.preventDefault();\n  // \t\ttoggleModal();\n  // \t});\n  // }\n  // const overlay = document.querySelector('.modal-overlay');\n  // overlay.addEventListener('click', toggleModal);\n  // var closemodal = document.querySelectorAll('.modal-close');\n  // for (var i = 0; i < closemodal.length; i++) {\n  // \tclosemodal[i].addEventListener('click', toggleModal);\n  // }\n  // document.onkeydown = function (evt) {\n  // \tevt = evt || window.event;\n  // \tvar isEscape = false;\n  // \tif ('key' in evt) {\n  // \t\tisEscape = evt.key === 'Escape' || evt.key === 'Esc';\n  // \t} else {\n  // \t\tisEscape = evt.keyCode === 27;\n  // \t}\n  // \tif (isEscape && document.body.classList.contains('modal-active')) {\n  // \t\ttoggleModal();\n  // \t}\n  // };\n  // function toggleModal() {\n  // \tconst body = document.querySelector('body');\n  // \tconst modal = document.querySelector('.modal');\n  // \tmodal.classList.toggle('opacity-0');\n  // \tmodal.classList.toggle('pointer-events-none');\n  // \tbody.classList.toggle('modal-active');\n  // }\n  // });\n\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {\n      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"title\", {\n        children: \"MyPutih\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 106,\n        columnNumber: 5\n      }, this)\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 105,\n      columnNumber: 4\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"main\", {\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_Header__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n        signedIn: session,\n        username: session === null || session === void 0 ? void 0 : session.user.name,\n        googleSignOut: next_auth_client__WEBPACK_IMPORTED_MODULE_4__[\"signOut\"]\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 110,\n        columnNumber: 5\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_Navbar__WEBPACK_IMPORTED_MODULE_6__[\"default\"], {\n        signedIn: session,\n        googleSignIn: next_auth_client__WEBPACK_IMPORTED_MODULE_4__[\"signIn\"],\n        toggleModal: toggleModal,\n        sendDataToParent: sendOptionToParent\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 115,\n        columnNumber: 5\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n        className: \"modal z-50 opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center\",\n        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n          onClick: toggleModal,\n          className: \"modal-overlay absolute w-full h-full bg-gray-900 opacity-50\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 123,\n          columnNumber: 6\n        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n          className: \"modal-container bg-white md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto w-full max-w-xs\",\n          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n            className: \"flex justify-between items-center p-2 ml-2 mr-2\",\n            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"p\", {\n              className: \"text-2xl font-bold\",\n              children: needHelp ? 'Need Help' : 'Give Help'\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 128,\n              columnNumber: 8\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              onClick: toggleModal,\n              className: \"modal-close cursor-pointer z-50\",\n              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__[\"XIcon\"], {\n                className: \"w-5 h-5\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 134,\n                columnNumber: 9\n              }, this)\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 131,\n              columnNumber: 8\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 127,\n            columnNumber: 7\n          }, this), needHelp && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"form\", {\n            onSubmit: handleSubmit,\n            className: \"bg-white shadow-md rounded px-8 pt-6 pb-8\",\n            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"mb-4\",\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                className: \"block text-gray-700 text-sm font-bold mb-2\",\n                htmlFor: \"name\",\n                children: \"Name\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 142,\n                columnNumber: 10\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                className: \"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline\",\n                id: \"name\",\n                type: \"text\",\n                value: info.username,\n                placeholder: \"Your Name\",\n                onChange: e => {\n                  console.log('name: ', e.target.value);\n                  setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                    username: e.target.value\n                  }));\n                }\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 147,\n                columnNumber: 10\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 141,\n              columnNumber: 9\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"mb-4\",\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                className: \"block text-gray-700 text-sm font-bold mb-2\",\n                htmlFor: \"contactNumber\",\n                children: \"Contact Number\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 160,\n                columnNumber: 10\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                className: \"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline\",\n                id: \"contactNumber\",\n                type: \"number\",\n                value: info.contactNumber,\n                placeholder: \"Your Contact Number\",\n                onChange: e => setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                  contactNumber: e.target.value\n                }))\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 165,\n                columnNumber: 10\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 159,\n              columnNumber: 9\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"mb-4\",\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                className: \"block text-gray-700 text-sm font-bold mb-2\",\n                htmlFor: \"contactNumber\",\n                children: \"What Do You Need\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 177,\n                columnNumber: 10\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                className: \"mt-2\",\n                children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          food: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 185,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Food\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 192,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 184,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 183,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          groceries: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 197,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Groceries\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 204,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 196,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 195,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          money: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 209,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Money\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 216,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 208,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 207,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          medical: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 221,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Medical\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 228,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 220,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 219,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          others: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 233,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Others\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 240,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 232,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 231,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                    type: \"text\",\n                    className: `${info.others ? 'show' : 'hidden'} form-input mt-1 block w-full border-2`,\n                    placeholder: \"Please state your other needs\",\n                    onChange: e => {\n                      setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                        othersDetail: e.target.value\n                      }));\n                    }\n                  }, void 0, false, {\n                    fileName: _jsxFileName,\n                    lineNumber: 244,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 243,\n                  columnNumber: 11\n                }, this)]\n              }, void 0, true, {\n                fileName: _jsxFileName,\n                lineNumber: 182,\n                columnNumber: 10\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 176,\n              columnNumber: 9\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"flex items-center justify-between\",\n              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n                className: \"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline\",\n                type: \"submit\",\n                children: \"Submit\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 258,\n                columnNumber: 10\n              }, this)\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 257,\n              columnNumber: 9\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 138,\n            columnNumber: 8\n          }, this), !needHelp && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"form\", {\n            onSubmit: handleSubmit,\n            className: \"bg-white shadow-md rounded px-8 pt-6 pb-8\",\n            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"mb-4\",\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                className: \"block text-gray-700 text-sm font-bold mb-2\",\n                htmlFor: \"name\",\n                children: \"Name\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 271,\n                columnNumber: 10\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                className: \"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline\",\n                id: \"name\",\n                type: \"text\",\n                value: info.username,\n                placeholder: \"Your Name\",\n                onChange: e => {\n                  console.log('name: ', e.target.value);\n                  setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                    username: e.target.value\n                  }));\n                }\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 276,\n                columnNumber: 10\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 270,\n              columnNumber: 9\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"mb-4\",\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                className: \"block text-gray-700 text-sm font-bold mb-2\",\n                htmlFor: \"contactNumber\",\n                children: \"Contact Number\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 289,\n                columnNumber: 10\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                className: \"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline\",\n                id: \"contactNumber\",\n                type: \"number\",\n                value: info.contactNumber,\n                placeholder: \"Your Contact Number\",\n                onChange: e => setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                  contactNumber: e.target.value\n                }))\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 294,\n                columnNumber: 10\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 288,\n              columnNumber: 9\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"mb-4\",\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                className: \"block text-gray-700 text-sm font-bold mb-2\",\n                htmlFor: \"contactNumber\",\n                children: \"What Do You Offer\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 306,\n                columnNumber: 10\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                className: \"mt-2\",\n                children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          food: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 314,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Food\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 321,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 313,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 312,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          groceries: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 326,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Groceries\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 333,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 325,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 324,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          money: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 338,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Money\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 345,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 337,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 336,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          medical: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 350,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Medical\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 357,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 349,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 348,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"label\", {\n                    className: \"inline-flex items-center\",\n                    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                      type: \"checkbox\",\n                      className: \"form-checkbox h-6 w-6 border-2 border-gray-300\",\n                      onChange: e => {\n                        setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                          others: e.target.checked\n                        }));\n                      }\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 362,\n                      columnNumber: 13\n                    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n                      className: \"ml-2\",\n                      children: \"Others\"\n                    }, void 0, false, {\n                      fileName: _jsxFileName,\n                      lineNumber: 369,\n                      columnNumber: 13\n                    }, this)]\n                  }, void 0, true, {\n                    fileName: _jsxFileName,\n                    lineNumber: 361,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 360,\n                  columnNumber: 11\n                }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n                  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"input\", {\n                    type: \"text\",\n                    className: `${info.others ? 'show' : 'hidden'} form-input mt-1 block w-full border-2`,\n                    placeholder: \"Please state other things you are helping with\",\n                    onChange: e => {\n                      setInfo(_objectSpread(_objectSpread({}, info), {}, {\n                        othersDetail: e.target.value\n                      }));\n                    }\n                  }, void 0, false, {\n                    fileName: _jsxFileName,\n                    lineNumber: 373,\n                    columnNumber: 12\n                  }, this)\n                }, void 0, false, {\n                  fileName: _jsxFileName,\n                  lineNumber: 372,\n                  columnNumber: 11\n                }, this)]\n              }, void 0, true, {\n                fileName: _jsxFileName,\n                lineNumber: 311,\n                columnNumber: 10\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 305,\n              columnNumber: 9\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: \"flex items-center justify-between\",\n              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n                className: \"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline\",\n                type: \"submit\",\n                children: \"Submit\"\n              }, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 387,\n                columnNumber: 10\n              }, this)\n            }, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 386,\n              columnNumber: 9\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 267,\n            columnNumber: 8\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 126,\n          columnNumber: 6\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 122,\n        columnNumber: 5\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_Map__WEBPACK_IMPORTED_MODULE_7__[\"default\"], {\n        className: _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_8___default.a.homeMap,\n        center: userLocation,\n        zoom: 14,\n        children: ({\n          TileLayer,\n          Marker,\n          Popup\n        }) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"Fragment\"], {\n          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(TileLayer, {\n            url: \"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\",\n            attribution: \"\\xA9 <a href=\\\"http://osm.org/copyright\\\">OpenStreetMap</a> contributors\"\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 402,\n            columnNumber: 8\n          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(Marker, {\n            position: userLocation,\n            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(Popup, {\n              children: [\"A pretty CSS3 popup. \", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"br\", {}, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 408,\n                columnNumber: 31\n              }, this), \" Easily customizable.\"]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 407,\n              columnNumber: 9\n            }, this)\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 406,\n            columnNumber: 8\n          }, this)]\n        }, void 0, true)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 399,\n        columnNumber: 5\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 109,\n      columnNumber: 4\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 104,\n    columnNumber: 3\n  }, this);\n}\nconst getServerSideProps = async context => {\n  const session = await Object(next_auth_client__WEBPACK_IMPORTED_MODULE_4__[\"getSession\"])(context);\n  return {\n    props: {\n      session\n    }\n  };\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcy9pbmRleC5qcz80NGQ4Il0sIm5hbWVzIjpbIkRFRkFVTFRfQ0VOVEVSIiwiSG9tZSIsInNlc3Npb24iLCJuZWVkSGVscCIsInNldE5lZWRIZWxwIiwidXNlU3RhdGUiLCJ1c2VyTG9jYXRpb24iLCJzZXRVc2VyTG9jYXRpb24iLCJpbmZvIiwic2V0SW5mbyIsInVzZXJuYW1lIiwidXNlciIsIm5hbWUiLCJjb250YWN0TnVtYmVyIiwiZm9vZCIsImdyb2NlcmllcyIsIm1vbmV5IiwibWVkaWNhbCIsIm90aGVycyIsIm90aGVyc0RldGFpbCIsInRvZ2dsZU1vZGFsIiwibW9kYWwiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJjbGFzc0xpc3QiLCJ0b2dnbGUiLCJoYW5kbGVTdWJtaXQiLCJlIiwicHJldmVudERlZmF1bHQiLCJjb25zb2xlIiwibG9nIiwic2VuZE9wdGlvblRvUGFyZW50IiwidXNlRWZmZWN0IiwibmF2aWdhdG9yIiwiZ2VvbG9jYXRpb24iLCJnZXRDdXJyZW50UG9zaXRpb24iLCJwb3NpdGlvbiIsImxhdCIsImNvb3JkcyIsImxhdGl0dWRlIiwibG5nIiwibG9uZ2l0dWRlIiwic2lnbk91dCIsInNpZ25JbiIsInRhcmdldCIsInZhbHVlIiwiY2hlY2tlZCIsInN0eWxlcyIsImhvbWVNYXAiLCJUaWxlTGF5ZXIiLCJNYXJrZXIiLCJQb3B1cCIsImdldFNlcnZlclNpZGVQcm9wcyIsImNvbnRleHQiLCJnZXRTZXNzaW9uIiwicHJvcHMiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUEsTUFBTUEsY0FBYyxHQUFHLENBQUMsUUFBRCxFQUFXLFVBQVgsQ0FBdkI7QUFFZSxTQUFTQyxJQUFULENBQWM7QUFBRUM7QUFBRixDQUFkLEVBQTJCO0FBQ3pDLFFBQU07QUFBQSxPQUFDQyxRQUFEO0FBQUEsT0FB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LFFBQU1uRCxPQUFPLEdBQUcsTUFBTW9ELG1FQUFVLENBQUNELE9BQUQsQ0FBaEM7QUFFQSxTQUFPO0FBQ05FLFNBQUssRUFBRTtBQUNOckQ7QUFETTtBQURELEdBQVA7QUFLQSxDQVJNIiwiZmlsZSI6Ii4vcGFnZXMvaW5kZXguanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFhJY29uIH0gZnJvbSAnQGhlcm9pY29ucy9yZWFjdC9vdXRsaW5lJztcbmltcG9ydCB7IHNpZ25Jbiwgc2lnbk91dCwgZ2V0U2Vzc2lvbiB9IGZyb20gJ25leHQtYXV0aC9jbGllbnQnO1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL0hlYWRlcic7XG5pbXBvcnQgTmF2YmFyIGZyb20gJy4uL2NvbXBvbmVudHMvTmF2YmFyJztcbmltcG9ydCBNYXAgZnJvbSAnLi4vY29tcG9uZW50cy9NYXAnO1xuaW1wb3J0IHN0eWxlcyBmcm9tICcuLi9zdHlsZXMvSG9tZS5tb2R1bGUuY3NzJztcblxuY29uc3QgREVGQVVMVF9DRU5URVIgPSBbMy4zMTU4MzQsIDEwMS41NTkyMDFdO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lKHsgc2Vzc2lvbiB9KSB7XG5cdGNvbnN0IFtuZWVkSGVscCwgc2V0TmVlZEhlbHBdID0gdXNlU3RhdGUoKTtcblx0Y29uc3QgW3VzZXJMb2NhdGlvbiwgc2V0VXNlckxvY2F0aW9uXSA9IHVzZVN0YXRlKFswLCAwXSk7XG5cdGNvbnN0IFtpbmZvLCBzZXRJbmZvXSA9IHVzZVN0YXRlKHtcblx0XHR1c2VybmFtZTogc2Vzc2lvbi51c2VyLm5hbWUsXG5cdFx0Y29udGFjdE51bWJlcjogMCxcblx0XHRmb29kOiBmYWxzZSxcblx0XHRncm9jZXJpZXM6IGZhbHNlLFxuXHRcdG1vbmV5OiBmYWxzZSxcblx0XHRtZWRpY2FsOiBmYWxzZSxcblx0XHRvdGhlcnM6IGZhbHNlLFxuXHRcdG90aGVyc0RldGFpbDogJycsXG5cdH0pO1xuXHQvLyBjb25zdCBbc2Vzc2lvbiwgbG9hZGluZ10gPSB1c2VTZXNzaW9uKCk7XG5cblx0ZnVuY3Rpb24gdG9nZ2xlTW9kYWwoKSB7XG5cdFx0Ly8gY29uc3QgYm9keSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ2JvZHknKTtcblx0XHRjb25zdCBtb2RhbCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5tb2RhbCcpO1xuXHRcdG1vZGFsLmNsYXNzTGlzdC50b2dnbGUoJ29wYWNpdHktMCcpO1xuXHRcdG1vZGFsLmNsYXNzTGlzdC50b2dnbGUoJ3BvaW50ZXItZXZlbnRzLW5vbmUnKTtcblx0XHQvLyBib2R5LmNsYXNzTGlzdC50b2dnbGUoJ21vZGFsLWFjdGl2ZScpO1xuXHRcdHNldEluZm8oe1xuXHRcdFx0dXNlcm5hbWU6IHNlc3Npb24udXNlci5uYW1lLFxuXHRcdFx0Y29udGFjdE51bWJlcjogMCxcblx0XHRcdGZvb2Q6IGZhbHNlLFxuXHRcdFx0Z3JvY2VyaWVzOiBmYWxzZSxcblx0XHRcdG1vbmV5OiBmYWxzZSxcblx0XHRcdG1lZGljYWw6IGZhbHNlLFxuXHRcdFx0b3RoZXJzOiBmYWxzZSxcblx0XHRcdG90aGVyc0RldGFpbDogJycsXG5cdFx0fSk7XG5cdH1cblxuXHRjb25zdCBoYW5kbGVTdWJtaXQgPSAoZSkgPT4ge1xuXHRcdGUucHJldmVudERlZmF1bHQoKTtcblx0XHRjb25zb2xlLmxvZygnaW5mbzogJywgaW5mbyk7XG5cdFx0dG9nZ2xlTW9kYWwoKTtcblx0fTtcblxuXHRjb25zdCBzZW5kT3B0aW9uVG9QYXJlbnQgPSAobmVlZEhlbHApID0+IHtcblx0XHQvLyB0aGUgY2FsbGJhY2suIFVzZSBhIGJldHRlciBuYW1lXG5cdFx0c2V0TmVlZEhlbHAobmVlZEhlbHApO1xuXHR9O1xuXG5cdHVzZUVmZmVjdCgoKSA9PiB7XG5cdFx0aWYgKCdnZW9sb2NhdGlvbicgaW4gbmF2aWdhdG9yKSB7XG5cdFx0XHRuYXZpZ2F0b3IuZ2VvbG9jYXRpb24uZ2V0Q3VycmVudFBvc2l0aW9uKGZ1bmN0aW9uIChwb3NpdGlvbikge1xuXHRcdFx0XHRjb25zb2xlLmxvZyh7XG5cdFx0XHRcdFx0bGF0OiBwb3NpdGlvbi5jb29yZHMubGF0aXR1ZGUsXG5cdFx0XHRcdFx0bG5nOiBwb3NpdGlvbi5jb29yZHMubG9uZ2l0dWRlLFxuXHRcdFx0XHR9KTtcblx0XHRcdFx0c2V0VXNlckxvY2F0aW9uKFtwb3NpdGlvbi5jb29yZHMubGF0aXR1ZGUsIHBvc2l0aW9uLmNvb3Jkcy5sb25naXR1ZGVdKTtcblx0XHRcdH0pO1xuXHRcdH1cblx0fSwgW10pO1xuXG5cdC8vIHVzZUVmZmVjdCgoKSA9PiB7XG5cdC8vIHZhciBvcGVubW9kYWwgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcubW9kYWwtb3BlbicpO1xuXHQvLyBmb3IgKHZhciBpID0gMDsgaSA8IG9wZW5tb2RhbC5sZW5ndGg7IGkrKykge1xuXHQvLyBcdG9wZW5tb2RhbFtpXS5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGZ1bmN0aW9uIChldmVudCkge1xuXHQvLyBcdFx0ZXZlbnQucHJldmVudERlZmF1bHQoKTtcblx0Ly8gXHRcdHRvZ2dsZU1vZGFsKCk7XG5cdC8vIFx0fSk7XG5cdC8vIH1cblx0Ly8gY29uc3Qgb3ZlcmxheSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5tb2RhbC1vdmVybGF5Jyk7XG5cdC8vIG92ZXJsYXkuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCB0b2dnbGVNb2RhbCk7XG5cdC8vIHZhciBjbG9zZW1vZGFsID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLm1vZGFsLWNsb3NlJyk7XG5cdC8vIGZvciAodmFyIGkgPSAwOyBpIDwgY2xvc2Vtb2RhbC5sZW5ndGg7IGkrKykge1xuXHQvLyBcdGNsb3NlbW9kYWxbaV0uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCB0b2dnbGVNb2RhbCk7XG5cdC8vIH1cblx0Ly8gZG9jdW1lbnQub25rZXlkb3duID0gZnVuY3Rpb24gKGV2dCkge1xuXHQvLyBcdGV2dCA9IGV2dCB8fCB3aW5kb3cuZXZlbnQ7XG5cdC8vIFx0dmFyIGlzRXNjYXBlID0gZmFsc2U7XG5cdC8vIFx0aWYgKCdrZXknIGluIGV2dCkge1xuXHQvLyBcdFx0aXNFc2NhcGUgPSBldnQua2V5ID09PSAnRXNjYXBlJyB8fCBldnQua2V5ID09PSAnRXNjJztcblx0Ly8gXHR9IGVsc2Uge1xuXHQvLyBcdFx0aXNFc2NhcGUgPSBldnQua2V5Q29kZSA9PT0gMjc7XG5cdC8vIFx0fVxuXHQvLyBcdGlmIChpc0VzY2FwZSAmJiBkb2N1bWVudC5ib2R5LmNsYXNzTGlzdC5jb250YWlucygnbW9kYWwtYWN0aXZlJykpIHtcblx0Ly8gXHRcdHRvZ2dsZU1vZGFsKCk7XG5cdC8vIFx0fVxuXHQvLyB9O1xuXHQvLyBmdW5jdGlvbiB0b2dnbGVNb2RhbCgpIHtcblx0Ly8gXHRjb25zdCBib2R5ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignYm9keScpO1xuXHQvLyBcdGNvbnN0IG1vZGFsID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLm1vZGFsJyk7XG5cdC8vIFx0bW9kYWwuY2xhc3NMaXN0LnRvZ2dsZSgnb3BhY2l0eS0wJyk7XG5cdC8vIFx0bW9kYWwuY2xhc3NMaXN0LnRvZ2dsZSgncG9pbnRlci1ldmVudHMtbm9uZScpO1xuXHQvLyBcdGJvZHkuY2xhc3NMaXN0LnRvZ2dsZSgnbW9kYWwtYWN0aXZlJyk7XG5cdC8vIH1cblx0Ly8gfSk7XG5cblx0cmV0dXJuIChcblx0XHQ8ZGl2PlxuXHRcdFx0PEhlYWQ+XG5cdFx0XHRcdDx0aXRsZT5NeVB1dGloPC90aXRsZT5cblx0XHRcdDwvSGVhZD5cblxuXHRcdFx0PG1haW4+XG5cdFx0XHRcdDxIZWFkZXJcblx0XHRcdFx0XHRzaWduZWRJbj17c2Vzc2lvbn1cblx0XHRcdFx0XHR1c2VybmFtZT17c2Vzc2lvbj8udXNlci5uYW1lfVxuXHRcdFx0XHRcdGdvb2dsZVNpZ25PdXQ9e3NpZ25PdXR9XG5cdFx0XHRcdC8+XG5cdFx0XHRcdDxOYXZiYXJcblx0XHRcdFx0XHRzaWduZWRJbj17c2Vzc2lvbn1cblx0XHRcdFx0XHRnb29nbGVTaWduSW49e3NpZ25Jbn1cblx0XHRcdFx0XHR0b2dnbGVNb2RhbD17dG9nZ2xlTW9kYWx9XG5cdFx0XHRcdFx0c2VuZERhdGFUb1BhcmVudD17c2VuZE9wdGlvblRvUGFyZW50fVxuXHRcdFx0XHQvPlxuXHRcdFx0XHR7LyogTW9kYWwtU3RhcnQgKi99XG5cdFx0XHRcdDxkaXYgY2xhc3NOYW1lPVwibW9kYWwgei01MCBvcGFjaXR5LTAgcG9pbnRlci1ldmVudHMtbm9uZSBmaXhlZCB3LWZ1bGwgaC1mdWxsIHRvcC0wIGxlZnQtMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlclwiPlxuXHRcdFx0XHRcdDxkaXZcblx0XHRcdFx0XHRcdG9uQ2xpY2s9e3RvZ2dsZU1vZGFsfVxuXHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwibW9kYWwtb3ZlcmxheSBhYnNvbHV0ZSB3LWZ1bGwgaC1mdWxsIGJnLWdyYXktOTAwIG9wYWNpdHktNTBcIj48L2Rpdj5cblx0XHRcdFx0XHQ8ZGl2IGNsYXNzTmFtZT1cIm1vZGFsLWNvbnRhaW5lciBiZy13aGl0ZSBtZDptYXgtdy1tZCBteC1hdXRvIHJvdW5kZWQgc2hhZG93LWxnIHotNTAgb3ZlcmZsb3cteS1hdXRvIHctZnVsbCBtYXgtdy14c1wiPlxuXHRcdFx0XHRcdFx0PGRpdiBjbGFzc05hbWU9XCJmbGV4IGp1c3RpZnktYmV0d2VlbiBpdGVtcy1jZW50ZXIgcC0yIG1sLTIgbXItMlwiPlxuXHRcdFx0XHRcdFx0XHQ8cCBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGRcIj5cblx0XHRcdFx0XHRcdFx0XHR7bmVlZEhlbHAgPyAnTmVlZCBIZWxwJyA6ICdHaXZlIEhlbHAnfVxuXHRcdFx0XHRcdFx0XHQ8L3A+XG5cdFx0XHRcdFx0XHRcdDxkaXZcblx0XHRcdFx0XHRcdFx0XHRvbkNsaWNrPXt0b2dnbGVNb2RhbH1cblx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJtb2RhbC1jbG9zZSBjdXJzb3ItcG9pbnRlciB6LTUwXCI+XG5cdFx0XHRcdFx0XHRcdFx0PFhJY29uIGNsYXNzTmFtZT1cInctNSBoLTVcIiAvPlxuXHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0e25lZWRIZWxwICYmIChcblx0XHRcdFx0XHRcdFx0PGZvcm1cblx0XHRcdFx0XHRcdFx0XHRvblN1Ym1pdD17aGFuZGxlU3VibWl0fVxuXHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImJnLXdoaXRlIHNoYWRvdy1tZCByb3VuZGVkIHB4LTggcHQtNiBwYi04XCI+XG5cdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzc05hbWU9XCJtYi00XCI+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8bGFiZWxcblx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1ncmF5LTcwMCB0ZXh0LXNtIGZvbnQtYm9sZCBtYi0yXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0aHRtbEZvcj1cIm5hbWVcIj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0TmFtZVxuXHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdDxpbnB1dFxuXHRcdFx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJzaGFkb3cgYXBwZWFyYW5jZS1ub25lIGJvcmRlciByb3VuZGVkIHctZnVsbCBweS0yIHB4LTMgdGV4dC1ncmF5LTcwMCBsZWFkaW5nLXRpZ2h0IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpzaGFkb3ctb3V0bGluZVwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGlkPVwibmFtZVwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJ0ZXh0XCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0dmFsdWU9e2luZm8udXNlcm5hbWV9XG5cdFx0XHRcdFx0XHRcdFx0XHRcdHBsYWNlaG9sZGVyPVwiWW91ciBOYW1lXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0b25DaGFuZ2U9eyhlKSA9PiB7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0Y29uc29sZS5sb2coJ25hbWU6ICcsIGUudGFyZ2V0LnZhbHVlKTtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRzZXRJbmZvKHsgLi4uaW5mbywgdXNlcm5hbWU6IGUudGFyZ2V0LnZhbHVlIH0pO1xuXHRcdFx0XHRcdFx0XHRcdFx0XHR9fVxuXHRcdFx0XHRcdFx0XHRcdFx0Lz5cblx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0XHQ8ZGl2IGNsYXNzTmFtZT1cIm1iLTRcIj5cblx0XHRcdFx0XHRcdFx0XHRcdDxsYWJlbFxuXHRcdFx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJibG9jayB0ZXh0LWdyYXktNzAwIHRleHQtc20gZm9udC1ib2xkIG1iLTJcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRodG1sRm9yPVwiY29udGFjdE51bWJlclwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRDb250YWN0IE51bWJlclxuXHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdDxpbnB1dFxuXHRcdFx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJzaGFkb3cgYXBwZWFyYW5jZS1ub25lIGJvcmRlciByb3VuZGVkIHctZnVsbCBweS0yIHB4LTMgdGV4dC1ncmF5LTcwMCBsZWFkaW5nLXRpZ2h0IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpzaGFkb3ctb3V0bGluZVwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGlkPVwiY29udGFjdE51bWJlclwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJudW1iZXJcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHR2YWx1ZT17aW5mby5jb250YWN0TnVtYmVyfVxuXHRcdFx0XHRcdFx0XHRcdFx0XHRwbGFjZWhvbGRlcj1cIllvdXIgQ29udGFjdCBOdW1iZXJcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0c2V0SW5mbyh7IC4uLmluZm8sIGNvbnRhY3ROdW1iZXI6IGUudGFyZ2V0LnZhbHVlIH0pXG5cdFx0XHRcdFx0XHRcdFx0XHRcdH1cblx0XHRcdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzc05hbWU9XCJtYi00XCI+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8bGFiZWxcblx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1ncmF5LTcwMCB0ZXh0LXNtIGZvbnQtYm9sZCBtYi0yXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0aHRtbEZvcj1cImNvbnRhY3ROdW1iZXJcIj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0V2hhdCBEbyBZb3UgTmVlZFxuXHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3NOYW1lPVwibXQtMlwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8ZGl2PlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdDxsYWJlbCBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXJcIj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdDxpbnB1dFxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR0eXBlPVwiY2hlY2tib3hcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJmb3JtLWNoZWNrYm94IGgtNiB3LTYgYm9yZGVyLTIgYm9yZGVyLWdyYXktMzAwXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0b25DaGFuZ2U9eyhlKSA9PiB7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0c2V0SW5mbyh7IC4uLmluZm8sIGZvb2Q6IGUudGFyZ2V0LmNoZWNrZWQgfSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdH19XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PHNwYW4gY2xhc3NOYW1lPVwibWwtMlwiPkZvb2Q8L3NwYW4+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlclwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGlucHV0XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJjaGVja2JveFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImZvcm0tY2hlY2tib3ggaC02IHctNiBib3JkZXItMiBib3JkZXItZ3JheS0zMDBcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+IHtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRzZXRJbmZvKHsgLi4uaW5mbywgZ3JvY2VyaWVzOiBlLnRhcmdldC5jaGVja2VkIH0pO1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR9fVxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0Lz5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdDxzcGFuIGNsYXNzTmFtZT1cIm1sLTJcIj5Hcm9jZXJpZXM8L3NwYW4+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlclwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGlucHV0XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJjaGVja2JveFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImZvcm0tY2hlY2tib3ggaC02IHctNiBib3JkZXItMiBib3JkZXItZ3JheS0zMDBcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+IHtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRzZXRJbmZvKHsgLi4uaW5mbywgbW9uZXk6IGUudGFyZ2V0LmNoZWNrZWQgfSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdH19XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PHNwYW4gY2xhc3NOYW1lPVwibWwtMlwiPk1vbmV5PC9zcGFuPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdDwvbGFiZWw+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8ZGl2PlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdDxsYWJlbCBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXJcIj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdDxpbnB1dFxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR0eXBlPVwiY2hlY2tib3hcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJmb3JtLWNoZWNrYm94IGgtNiB3LTYgYm9yZGVyLTIgYm9yZGVyLWdyYXktMzAwXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0b25DaGFuZ2U9eyhlKSA9PiB7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0c2V0SW5mbyh7IC4uLmluZm8sIG1lZGljYWw6IGUudGFyZ2V0LmNoZWNrZWQgfSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdH19XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PHNwYW4gY2xhc3NOYW1lPVwibWwtMlwiPk1lZGljYWw8L3NwYW4+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlclwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGlucHV0XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJjaGVja2JveFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImZvcm0tY2hlY2tib3ggaC02IHctNiBib3JkZXItMiBib3JkZXItZ3JheS0zMDBcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+IHtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRzZXRJbmZvKHsgLi4uaW5mbywgb3RoZXJzOiBlLnRhcmdldC5jaGVja2VkIH0pO1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR9fVxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0Lz5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdDxzcGFuIGNsYXNzTmFtZT1cIm1sLTJcIj5PdGhlcnM8L3NwYW4+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGlucHV0XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR0eXBlPVwidGV4dFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9e2Ake1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRpbmZvLm90aGVycyA/ICdzaG93JyA6ICdoaWRkZW4nXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR9IGZvcm0taW5wdXQgbXQtMSBibG9jayB3LWZ1bGwgYm9yZGVyLTJgfVxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0cGxhY2Vob2xkZXI9XCJQbGVhc2Ugc3RhdGUgeW91ciBvdGhlciBuZWVkc1wiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+IHtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0c2V0SW5mbyh7IC4uLmluZm8sIG90aGVyc0RldGFpbDogZS50YXJnZXQudmFsdWUgfSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHR9fVxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW5cIj5cblx0XHRcdFx0XHRcdFx0XHRcdDxidXR0b25cblx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiYmctYmx1ZS01MDAgaG92ZXI6YmctYmx1ZS03MDAgdGV4dC13aGl0ZSBmb250LWJvbGQgcHktMiBweC00IHJvdW5kZWQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnNoYWRvdy1vdXRsaW5lXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0dHlwZT1cInN1Ym1pdFwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRTdWJtaXRcblx0XHRcdFx0XHRcdFx0XHRcdDwvYnV0dG9uPlxuXHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0XHQ8L2Zvcm0+XG5cdFx0XHRcdFx0XHQpfVxuXHRcdFx0XHRcdFx0eyFuZWVkSGVscCAmJiAoXG5cdFx0XHRcdFx0XHRcdDxmb3JtXG5cdFx0XHRcdFx0XHRcdFx0b25TdWJtaXQ9e2hhbmRsZVN1Ym1pdH1cblx0XHRcdFx0XHRcdFx0XHRjbGFzc05hbWU9XCJiZy13aGl0ZSBzaGFkb3ctbWQgcm91bmRlZCBweC04IHB0LTYgcGItOFwiPlxuXHRcdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3NOYW1lPVwibWItNFwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImJsb2NrIHRleHQtZ3JheS03MDAgdGV4dC1zbSBmb250LWJvbGQgbWItMlwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGh0bWxGb3I9XCJuYW1lXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdE5hbWVcblx0XHRcdFx0XHRcdFx0XHRcdDwvbGFiZWw+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8aW5wdXRcblx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwic2hhZG93IGFwcGVhcmFuY2Utbm9uZSBib3JkZXIgcm91bmRlZCB3LWZ1bGwgcHktMiBweC0zIHRleHQtZ3JheS03MDAgbGVhZGluZy10aWdodCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6c2hhZG93LW91dGxpbmVcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRpZD1cIm5hbWVcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHR0eXBlPVwidGV4dFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdHZhbHVlPXtpbmZvLnVzZXJuYW1lfVxuXHRcdFx0XHRcdFx0XHRcdFx0XHRwbGFjZWhvbGRlcj1cIllvdXIgTmFtZVwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdG9uQ2hhbmdlPXsoZSkgPT4ge1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNvbnNvbGUubG9nKCduYW1lOiAnLCBlLnRhcmdldC52YWx1ZSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0c2V0SW5mbyh7IC4uLmluZm8sIHVzZXJuYW1lOiBlLnRhcmdldC52YWx1ZSB9KTtcblx0XHRcdFx0XHRcdFx0XHRcdFx0fX1cblx0XHRcdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzc05hbWU9XCJtYi00XCI+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8bGFiZWxcblx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiYmxvY2sgdGV4dC1ncmF5LTcwMCB0ZXh0LXNtIGZvbnQtYm9sZCBtYi0yXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0aHRtbEZvcj1cImNvbnRhY3ROdW1iZXJcIj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0Q29udGFjdCBOdW1iZXJcblx0XHRcdFx0XHRcdFx0XHRcdDwvbGFiZWw+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8aW5wdXRcblx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwic2hhZG93IGFwcGVhcmFuY2Utbm9uZSBib3JkZXIgcm91bmRlZCB3LWZ1bGwgcHktMiBweC0zIHRleHQtZ3JheS03MDAgbGVhZGluZy10aWdodCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6c2hhZG93LW91dGxpbmVcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRpZD1cImNvbnRhY3ROdW1iZXJcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHR0eXBlPVwibnVtYmVyXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0dmFsdWU9e2luZm8uY29udGFjdE51bWJlcn1cblx0XHRcdFx0XHRcdFx0XHRcdFx0cGxhY2Vob2xkZXI9XCJZb3VyIENvbnRhY3QgTnVtYmVyXCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0b25DaGFuZ2U9eyhlKSA9PlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdHNldEluZm8oeyAuLi5pbmZvLCBjb250YWN0TnVtYmVyOiBlLnRhcmdldC52YWx1ZSB9KVxuXHRcdFx0XHRcdFx0XHRcdFx0XHR9XG5cdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3NOYW1lPVwibWItNFwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImJsb2NrIHRleHQtZ3JheS03MDAgdGV4dC1zbSBmb250LWJvbGQgbWItMlwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGh0bWxGb3I9XCJjb250YWN0TnVtYmVyXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFdoYXQgRG8gWW91IE9mZmVyXG5cdFx0XHRcdFx0XHRcdFx0XHQ8L2xhYmVsPlxuXHRcdFx0XHRcdFx0XHRcdFx0PGRpdiBjbGFzc05hbWU9XCJtdC0yXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlclwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGlucHV0XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJjaGVja2JveFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImZvcm0tY2hlY2tib3ggaC02IHctNiBib3JkZXItMiBib3JkZXItZ3JheS0zMDBcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+IHtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRzZXRJbmZvKHsgLi4uaW5mbywgZm9vZDogZS50YXJnZXQuY2hlY2tlZCB9KTtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0fX1cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8c3BhbiBjbGFzc05hbWU9XCJtbC0yXCI+Rm9vZDwvc3Bhbj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2xhYmVsPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PGRpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8bGFiZWwgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8aW5wdXRcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0dHlwZT1cImNoZWNrYm94XCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiZm9ybS1jaGVja2JveCBoLTYgdy02IGJvcmRlci0yIGJvcmRlci1ncmF5LTMwMFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdG9uQ2hhbmdlPXsoZSkgPT4ge1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHNldEluZm8oeyAuLi5pbmZvLCBncm9jZXJpZXM6IGUudGFyZ2V0LmNoZWNrZWQgfSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdH19XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PHNwYW4gY2xhc3NOYW1lPVwibWwtMlwiPkdyb2Nlcmllczwvc3Bhbj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2xhYmVsPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PGRpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8bGFiZWwgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8aW5wdXRcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0dHlwZT1cImNoZWNrYm94XCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiZm9ybS1jaGVja2JveCBoLTYgdy02IGJvcmRlci0yIGJvcmRlci1ncmF5LTMwMFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdG9uQ2hhbmdlPXsoZSkgPT4ge1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHNldEluZm8oeyAuLi5pbmZvLCBtb25leTogZS50YXJnZXQuY2hlY2tlZCB9KTtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0fX1cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8c3BhbiBjbGFzc05hbWU9XCJtbC0yXCI+TW9uZXk8L3NwYW4+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PC9sYWJlbD5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdDxkaXY+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGxhYmVsIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlclwiPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PGlucHV0XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJjaGVja2JveFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImZvcm0tY2hlY2tib3ggaC02IHctNiBib3JkZXItMiBib3JkZXItZ3JheS0zMDBcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRvbkNoYW5nZT17KGUpID0+IHtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRzZXRJbmZvKHsgLi4uaW5mbywgbWVkaWNhbDogZS50YXJnZXQuY2hlY2tlZCB9KTtcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0fX1cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8c3BhbiBjbGFzc05hbWU9XCJtbC0yXCI+TWVkaWNhbDwvc3Bhbj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2xhYmVsPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PGRpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8bGFiZWwgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8aW5wdXRcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0dHlwZT1cImNoZWNrYm94XCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0Y2xhc3NOYW1lPVwiZm9ybS1jaGVja2JveCBoLTYgdy02IGJvcmRlci0yIGJvcmRlci1ncmF5LTMwMFwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdG9uQ2hhbmdlPXsoZSkgPT4ge1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHNldEluZm8oeyAuLi5pbmZvLCBvdGhlcnM6IGUudGFyZ2V0LmNoZWNrZWQgfSk7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdH19XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0PHNwYW4gY2xhc3NOYW1lPVwibWwtMlwiPk90aGVyczwvc3Bhbj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2xhYmVsPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0PGRpdj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQ8aW5wdXRcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJ0ZXh0XCJcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT17YCR7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdGluZm8ub3RoZXJzID8gJ3Nob3cnIDogJ2hpZGRlbidcblx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdH0gZm9ybS1pbnB1dCBtdC0xIGJsb2NrIHctZnVsbCBib3JkZXItMmB9XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRwbGFjZWhvbGRlcj1cIlBsZWFzZSBzdGF0ZSBvdGhlciB0aGluZ3MgeW91IGFyZSBoZWxwaW5nIHdpdGhcIlxuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0b25DaGFuZ2U9eyhlKSA9PiB7XG5cdFx0XHRcdFx0XHRcdFx0XHRcdFx0XHRcdHNldEluZm8oeyAuLi5pbmZvLCBvdGhlcnNEZXRhaWw6IGUudGFyZ2V0LnZhbHVlIH0pO1xuXHRcdFx0XHRcdFx0XHRcdFx0XHRcdFx0fX1cblx0XHRcdFx0XHRcdFx0XHRcdFx0XHQvPlxuXHRcdFx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0XHRcdDwvZGl2PlxuXHRcdFx0XHRcdFx0XHRcdDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuXCI+XG5cdFx0XHRcdFx0XHRcdFx0XHQ8YnV0dG9uXG5cdFx0XHRcdFx0XHRcdFx0XHRcdGNsYXNzTmFtZT1cImJnLWJsdWUtNTAwIGhvdmVyOmJnLWJsdWUtNzAwIHRleHQtd2hpdGUgZm9udC1ib2xkIHB5LTIgcHgtNCByb3VuZGVkIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpzaGFkb3ctb3V0bGluZVwiXG5cdFx0XHRcdFx0XHRcdFx0XHRcdHR5cGU9XCJzdWJtaXRcIj5cblx0XHRcdFx0XHRcdFx0XHRcdFx0U3VibWl0XG5cdFx0XHRcdFx0XHRcdFx0XHQ8L2J1dHRvbj5cblx0XHRcdFx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0XHRcdFx0PC9mb3JtPlxuXHRcdFx0XHRcdFx0KX1cblx0XHRcdFx0XHQ8L2Rpdj5cblx0XHRcdFx0PC9kaXY+XG5cdFx0XHRcdHsvKiBNb2RhbC1FbmQgKi99XG5cblx0XHRcdFx0PE1hcCBjbGFzc05hbWU9e3N0eWxlcy5ob21lTWFwfSBjZW50ZXI9e3VzZXJMb2NhdGlvbn0gem9vbT17MTR9PlxuXHRcdFx0XHRcdHsoeyBUaWxlTGF5ZXIsIE1hcmtlciwgUG9wdXAgfSkgPT4gKFxuXHRcdFx0XHRcdFx0PD5cblx0XHRcdFx0XHRcdFx0PFRpbGVMYXllclxuXHRcdFx0XHRcdFx0XHRcdHVybD1cImh0dHBzOi8ve3N9LnRpbGUub3BlbnN0cmVldG1hcC5vcmcve3p9L3t4fS97eX0ucG5nXCJcblx0XHRcdFx0XHRcdFx0XHRhdHRyaWJ1dGlvbj0nJmNvcHk7IDxhIGhyZWY9XCJodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHRcIj5PcGVuU3RyZWV0TWFwPC9hPiBjb250cmlidXRvcnMnXG5cdFx0XHRcdFx0XHRcdC8+XG5cdFx0XHRcdFx0XHRcdDxNYXJrZXIgcG9zaXRpb249e3VzZXJMb2NhdGlvbn0+XG5cdFx0XHRcdFx0XHRcdFx0PFBvcHVwPlxuXHRcdFx0XHRcdFx0XHRcdFx0QSBwcmV0dHkgQ1NTMyBwb3B1cC4gPGJyIC8+IEVhc2lseSBjdXN0b21pemFibGUuXG5cdFx0XHRcdFx0XHRcdFx0PC9Qb3B1cD5cblx0XHRcdFx0XHRcdFx0PC9NYXJrZXI+XG5cdFx0XHRcdFx0XHQ8Lz5cblx0XHRcdFx0XHQpfVxuXHRcdFx0XHQ8L01hcD5cblx0XHRcdDwvbWFpbj5cblx0XHQ8L2Rpdj5cblx0KTtcbn1cblxuZXhwb3J0IGNvbnN0IGdldFNlcnZlclNpZGVQcm9wcyA9IGFzeW5jIChjb250ZXh0KSA9PiB7XG5cdGNvbnN0IHNlc3Npb24gPSBhd2FpdCBnZXRTZXNzaW9uKGNvbnRleHQpO1xuXG5cdHJldHVybiB7XG5cdFx0cHJvcHM6IHtcblx0XHRcdHNlc3Npb24sXG5cdFx0fSxcblx0fTtcbn07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/index.js\n");
-
-/***/ }),
-
-/***/ "./styles/Home.module.css":
-/*!********************************!*\
-  !*** ./styles/Home.module.css ***!
-  \********************************/
-/*! no static exports found */
+/***/ "cDcd":
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"container\": \"Home_container__1EcsU\",\n\t\"main\": \"Home_main__1x8gC\",\n\t\"footer\": \"Home_footer__1WdhD\",\n\t\"title\": \"Home_title__3DjR7\",\n\t\"description\": \"Home_description__17Z4F\",\n\t\"code\": \"Home_code__axx2Y\",\n\t\"grid\": \"Home_grid__2Ei2F\",\n\t\"card\": \"Home_card__2SdtB\",\n\t\"logo\": \"Home_logo__1YbrH\",\n\t\"homeMap\": \"Home_homeMap__36czY\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zdHlsZXMvSG9tZS5tb2R1bGUuY3NzP2VmZDQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiLi9zdHlsZXMvSG9tZS5tb2R1bGUuY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiY29udGFpbmVyXCI6IFwiSG9tZV9jb250YWluZXJfXzFFY3NVXCIsXG5cdFwibWFpblwiOiBcIkhvbWVfbWFpbl9fMXg4Z0NcIixcblx0XCJmb290ZXJcIjogXCJIb21lX2Zvb3Rlcl9fMVdkaERcIixcblx0XCJ0aXRsZVwiOiBcIkhvbWVfdGl0bGVfXzNEalI3XCIsXG5cdFwiZGVzY3JpcHRpb25cIjogXCJIb21lX2Rlc2NyaXB0aW9uX18xN1o0RlwiLFxuXHRcImNvZGVcIjogXCJIb21lX2NvZGVfX2F4eDJZXCIsXG5cdFwiZ3JpZFwiOiBcIkhvbWVfZ3JpZF9fMkVpMkZcIixcblx0XCJjYXJkXCI6IFwiSG9tZV9jYXJkX18yU2R0QlwiLFxuXHRcImxvZ29cIjogXCJIb21lX2xvZ29fXzFZYnJIXCIsXG5cdFwiaG9tZU1hcFwiOiBcIkhvbWVfaG9tZU1hcF9fMzZjellcIlxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./styles/Home.module.css\n");
+module.exports = require("react");
 
 /***/ }),
 
-/***/ "@heroicons/react/outline":
-/*!*******************************************!*\
-  !*** external "@heroicons/react/outline" ***!
-  \*******************************************/
-/*! no static exports found */
+/***/ "hgx0":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"@heroicons/react/outline\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJAaGVyb2ljb25zL3JlYWN0L291dGxpbmVcIj83ZDczIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6IkBoZXJvaWNvbnMvcmVhY3Qvb3V0bGluZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIkBoZXJvaWNvbnMvcmVhY3Qvb3V0bGluZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///@heroicons/react/outline\n");
+module.exports = require("leaflet");
 
 /***/ }),
 
-/***/ "leaflet":
-/*!**************************!*\
-  !*** external "leaflet" ***!
-  \**************************/
-/*! no static exports found */
+/***/ "uM63":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"leaflet\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJsZWFmbGV0XCI/ZjU0ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJsZWFmbGV0LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwibGVhZmxldFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///leaflet\n");
+module.exports = require("react-number-format");
 
 /***/ }),
 
-/***/ "next-auth/client":
-/*!***********************************!*\
-  !*** external "next-auth/client" ***!
-  \***********************************/
-/*! no static exports found */
+/***/ "vRNQ":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"next-auth/client\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0LWF1dGgvY2xpZW50XCI/ZDNiMCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJuZXh0LWF1dGgvY2xpZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwibmV4dC1hdXRoL2NsaWVudFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next-auth/client\n");
+// Exports
+module.exports = {
+	"container": "Home_container__1EcsU",
+	"main": "Home_main__1x8gC",
+	"footer": "Home_footer__1WdhD",
+	"title": "Home_title__3DjR7",
+	"description": "Home_description__17Z4F",
+	"code": "Home_code__axx2Y",
+	"grid": "Home_grid__2Ei2F",
+	"card": "Home_card__2SdtB",
+	"logo": "Home_logo__1YbrH",
+	"homeMap": "Home_homeMap__36czY"
+};
+
 
 /***/ }),
 
-/***/ "next/dynamic":
-/*!*******************************!*\
-  !*** external "next/dynamic" ***!
-  \*******************************/
-/*! no static exports found */
+/***/ "xnum":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"next/dynamic\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0L2R5bmFtaWNcIj82ZDNmIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im5leHQvZHluYW1pYy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIm5leHQvZHluYW1pY1wiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next/dynamic\n");
+module.exports = require("next/head");
 
 /***/ }),
 
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/*! no static exports found */
+/***/ "zr5I":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"next/head\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0L2hlYWRcIj81ZWYyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im5leHQvaGVhZC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIm5leHQvaGVhZFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next/head\n");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"react\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdFwiPzU4OGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoicmVhY3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJyZWFjdFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react\n");
-
-/***/ }),
-
-/***/ "react-leaflet":
-/*!********************************!*\
-  !*** external "react-leaflet" ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"react-leaflet\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC1sZWFmbGV0XCI/ODUxNyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJyZWFjdC1sZWFmbGV0LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwicmVhY3QtbGVhZmxldFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react-leaflet\n");
-
-/***/ }),
-
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"react/jsx-dev-runtime\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC9qc3gtZGV2LXJ1bnRpbWVcIj9jZDkwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InJlYWN0L2pzeC1kZXYtcnVudGltZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react/jsx-dev-runtime\n");
+module.exports = require("axios");
 
 /***/ })
 

@@ -5,30 +5,41 @@ import 'leaflet/dist/leaflet.css';
 
 import styles from './Map.module.css';
 
-const { MapContainer } = ReactLeaflet;
+const { MapContainer, useMap } = ReactLeaflet;
 
-const Map = ({ children, className, ...rest }) => {
-  let mapClassName = styles.map;
+const Map = ({ children, className, center, zoom, ...rest }) => {
+	let mapClassName = styles.map;
 
-  if ( className ) {
-    mapClassName = `${mapClassName} ${className}`;
-  }
+	if (className) {
+		mapClassName = `${mapClassName} ${className}`;
+	}
 
-  useEffect(() => {
-    delete L.Icon.Default.prototype._getIconUrl;
+	function ChangeView({ center, zoom }) {
+		const map = useMap();
+		map.setView(center, zoom);
+		return null;
+	}
 
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl: require( 'leaflet/dist/images/marker-icon-2x.png' ),
-      iconUrl: require( 'leaflet/dist/images/marker-icon.png' ),
-      shadowUrl: require( 'leaflet/dist/images/marker-shadow.png' ),
-    });
-  }, []);
+	useEffect(() => {
+		delete L.Icon.Default.prototype._getIconUrl;
 
-  return (
-    <MapContainer className={mapClassName} {...rest}>
-      { children(ReactLeaflet) }
-    </MapContainer>
-  )
-}
+		L.Icon.Default.mergeOptions({
+			iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+			iconUrl: require('leaflet/dist/images/marker-icon.png'),
+			shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+		});
+	}, []);
+
+	return (
+		<MapContainer
+			className={mapClassName}
+			center={center}
+			zoom={zoom}
+			{...rest}>
+			<ChangeView center={center} zoom={zoom} />
+			{children(ReactLeaflet)}
+		</MapContainer>
+	);
+};
 
 export default Map;

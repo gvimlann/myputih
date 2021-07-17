@@ -1,4 +1,11 @@
-function Navbar({ signedIn, googleSignIn, toggleModal, sendDataToParent }) {
+function Navbar({
+	signedIn,
+	googleSignIn,
+	toggleModal,
+	toggleErrorModal,
+	sendDataToParent,
+	locationSwitchedOn,
+}) {
 	const isActive = true;
 
 	return (
@@ -10,8 +17,13 @@ function Navbar({ signedIn, googleSignIn, toggleModal, sendDataToParent }) {
 				<div className={'flex space-x-4 justify-between'}>
 					<a
 						onClick={() => {
-							sendDataToParent(true);
-							toggleModal();
+							// console.log('location switch on: ', locationSwitchedOn);
+							if (locationSwitchedOn) {
+								sendDataToParent(true);
+								toggleModal();
+							} else {
+								toggleErrorModal();
+							}
 						}}
 						href="#"
 						className={
@@ -21,8 +33,13 @@ function Navbar({ signedIn, googleSignIn, toggleModal, sendDataToParent }) {
 					</a>
 					<a
 						onClick={() => {
-							sendDataToParent(false);
-							toggleModal();
+							// console.log('location switch on: ', locationSwitchedOn);
+							if (locationSwitchedOn) {
+								sendDataToParent(false);
+								toggleModal();
+							} else {
+								toggleErrorModal();
+							}
 						}}
 						href="#"
 						className={
@@ -30,13 +47,13 @@ function Navbar({ signedIn, googleSignIn, toggleModal, sendDataToParent }) {
 						}>
 						<span className={'block text-white text-lg'}>Give Help</span>
 					</a>
-					<a
+					{/* <a
 						href="#"
 						className={
 							'flex-1 block rounded-full bg-gray-600 hover:bg-gray-400 justify-center text-center p-5 mb-1'
 						}>
 						<span className={'block text-white text-lg'}>NGO</span>
-					</a>
+					</a> */}
 				</div>
 			)}
 			{!signedIn && (
