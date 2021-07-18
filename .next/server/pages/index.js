@@ -345,14 +345,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 const DEFAULT_CENTER = [4.175975, 102.120976];
 
-async function checkUserIfExists(user) {
-  external_axios_default.a.post(`/api/user/get`, {
-    email: user.email,
-    name: user.name
-  }).then(res => {// console.log(res);
-  });
-}
-
 async function createOrUpdateData(user, state) {
   external_axios_default.a.post(`/api/info/createorupdate`, {
     name: user.name,
@@ -363,7 +355,6 @@ async function createOrUpdateData(user, state) {
     money: state.money,
     medical: state.medical,
     others: state.others,
-    othersDetail: state.othersDetail,
     needHelp: state.needHelp,
     location: state.userLocation,
     othersNeed: state.othersNeed
@@ -389,8 +380,12 @@ class pages_Home extends external_react_default.a.Component {
       });
     });
 
-    _defineProperty(this, "getAllInfo", async () => {
-      external_axios_default.a.get(`/api/info/get`).then(res => {
+    _defineProperty(this, "checkUserIfExistsAndGetData", async user => {
+      external_axios_default.a.post(`/api/info/get`, {
+        email: user.email,
+        name: user.name
+      }).then(res => {
+        console.log(res.data);
         this.setState({
           allPointsInfo: res.data
         });
@@ -411,7 +406,7 @@ class pages_Home extends external_react_default.a.Component {
         money: false,
         medical: false,
         others: false,
-        othersDetail: ''
+        othersNeed: ''
       });
     });
 
@@ -433,6 +428,20 @@ class pages_Home extends external_react_default.a.Component {
       e.preventDefault();
       this.toggleModal();
       createOrUpdateData(this.session.user, this.state);
+      this.setState({
+        allPointsInfo: this.state.allPointsInfo.concat({
+          contactNumber: this.state.contactNumber,
+          food: this.state.food,
+          groceries: this.state.groceries,
+          money: this.state.money,
+          medical: this.state.medical,
+          others: this.state.others,
+          needHelp: this.state.needHelp,
+          latitude: this.state.userLocation[0],
+          longitude: this.state.userLocation[1],
+          othersNeed: this.state.othersNeed
+        })
+      });
       console.log('info: ', this.state);
     });
 
@@ -445,7 +454,7 @@ class pages_Home extends external_react_default.a.Component {
       money: false,
       medical: false,
       others: false,
-      othersDetail: '',
+      othersNeed: '',
       needHelp: false,
       userLocation: DEFAULT_CENTER,
       locationSwitchedOn: false,
@@ -456,8 +465,9 @@ class pages_Home extends external_react_default.a.Component {
     this.toggleInfoModal.bind(this);
     this.sendOptionToParent.bind(this);
     this.toggleErrorModal.bind(this);
-    this.handleSubmit.bind(this);
-    this.getAllInfo.bind(this);
+    this.handleSubmit.bind(this); // this.getAllInfo.bind(this);
+
+    this.checkUserIfExistsAndGetData.bind(this);
   } // const [session, loading] = useSession();
 
 
@@ -487,8 +497,8 @@ class pages_Home extends external_react_default.a.Component {
 
     if (((_this$session = this.session) === null || _this$session === void 0 ? void 0 : _this$session.user) !== undefined) {
       let user = this.session.user;
-      checkUserIfExists(user);
-      this.getAllInfo(); // this.setState({ allPointsInfo: getAllInfo() });
+      this.checkUserIfExistsAndGetData(user); // this.getAllInfo();
+      // this.setState({ allPointsInfo: getAllInfo() });
       // console.log('all info');
       // console.log(this.state.allPointsInfo);
     }
@@ -691,7 +701,7 @@ class pages_Home extends external_react_default.a.Component {
                       placeholder: "Please state your other needs",
                       onChange: e => {
                         this.setState({
-                          othersDetail: e.target.value
+                          othersNeed: e.target.value
                         });
                       }
                     })
@@ -856,7 +866,7 @@ class pages_Home extends external_react_default.a.Component {
                       placeholder: "Please state other things you are helping with",
                       onChange: e => {
                         this.setState({
-                          othersDetail: e.target.value
+                          othersNeed: e.target.value
                         });
                       }
                     })

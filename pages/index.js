@@ -11,17 +11,6 @@ import NumberFormat from 'react-number-format';
 
 const DEFAULT_CENTER = [4.175975, 102.120976];
 
-async function checkUserIfExists(user) {
-	axios
-		.post(`/api/user/get`, {
-			email: user.email,
-			name: user.name,
-		})
-		.then((res) => {
-			// console.log(res);
-		});
-}
-
 async function createOrUpdateData(user, state) {
 	axios
 		.post(`/api/info/createorupdate`, {
@@ -33,7 +22,6 @@ async function createOrUpdateData(user, state) {
 			money: state.money,
 			medical: state.medical,
 			others: state.others,
-			othersDetail: state.othersDetail,
 			needHelp: state.needHelp,
 			location: state.userLocation,
 			othersNeed: state.othersNeed,
@@ -62,7 +50,7 @@ export default class Home extends React.Component {
 			money: false,
 			medical: false,
 			others: false,
-			othersDetail: '',
+			othersNeed: '',
 			needHelp: false,
 			userLocation: DEFAULT_CENTER,
 			locationSwitchedOn: false,
@@ -74,7 +62,8 @@ export default class Home extends React.Component {
 		this.sendOptionToParent.bind(this);
 		this.toggleErrorModal.bind(this);
 		this.handleSubmit.bind(this);
-		this.getAllInfo.bind(this);
+		// this.getAllInfo.bind(this);
+		this.checkUserIfExistsAndGetData.bind(this);
 	}
 	// const [session, loading] = useSession();
 
@@ -82,11 +71,23 @@ export default class Home extends React.Component {
 		this.setState({ needHelp: data });
 	};
 
-	getAllInfo = async () => {
-		axios.get(`/api/info/get`).then((res) => {
-			this.setState({ allPointsInfo: res.data });
-		});
+	checkUserIfExistsAndGetData = async (user) => {
+		axios
+			.post(`/api/info/get`, {
+				email: user.email,
+				name: user.name,
+			})
+			.then((res) => {
+				console.log(res.data);
+				this.setState({ allPointsInfo: res.data });
+			});
 	};
+
+	// getAllInfo = async () => {
+	// 	axios.get(`/api/info/get`).then((res) => {
+	// 		this.setState({ allPointsInfo: res.data });
+	// 	});
+	// };
 
 	toggleModal = () => {
 		// const body = document.querySelector('body');
@@ -102,7 +103,7 @@ export default class Home extends React.Component {
 			money: false,
 			medical: false,
 			others: false,
-			othersDetail: '',
+			othersNeed: '',
 		});
 	};
 
@@ -125,7 +126,21 @@ export default class Home extends React.Component {
 		e.preventDefault();
 		this.toggleModal();
 		createOrUpdateData(this.session.user, this.state);
-		// console.log('info: ', this.state);
+		this.setState({
+			allPointsInfo: this.state.allPointsInfo.concat({
+				contactNumber: this.state.contactNumber,
+				food: this.state.food,
+				groceries: this.state.groceries,
+				money: this.state.money,
+				medical: this.state.medical,
+				others: this.state.others,
+				needHelp: this.state.needHelp,
+				latitude: this.state.userLocation[0],
+				longitude: this.state.userLocation[1],
+				othersNeed: this.state.othersNeed,
+			}),
+		});
+		console.log('info: ', this.state);
 	};
 
 	componentDidMount() {
@@ -148,8 +163,8 @@ export default class Home extends React.Component {
 		// user is logged in
 		if (this.session?.user !== undefined) {
 			let user = this.session.user;
-			checkUserIfExists(user);
-			this.getAllInfo();
+			this.checkUserIfExistsAndGetData(user);
+			// this.getAllInfo();
 			// this.setState({ allPointsInfo: getAllInfo() });
 			// console.log('all info');
 			// console.log(this.state.allPointsInfo);
@@ -340,7 +355,7 @@ export default class Home extends React.Component {
 													placeholder="Please state your other needs"
 													onChange={(e) => {
 														this.setState({
-															othersDetail: e.target.value,
+															othersNeed: e.target.value,
 														});
 													}}
 												/>
@@ -504,7 +519,7 @@ export default class Home extends React.Component {
 													placeholder="Please state other things you are helping with"
 													onChange={(e) => {
 														this.setState({
-															othersDetail: e.target.value,
+															othersNeed: e.target.value,
 														});
 													}}
 												/>
