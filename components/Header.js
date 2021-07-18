@@ -2,7 +2,7 @@ function Header({ signedIn, googleSignOut, username }) {
 	return (
 		<div
 			className={
-				'sticky top-0 z-10 bg-gray-200 flex items-center justify-between p-2 lg:px-5 shadow-md'
+				'sticky top-0 z-20 bg-gray-200 flex items-center justify-between p-2 lg:px-5 shadow-md'
 			}>
 			<h1 className={'text-2xl'}>MyPutih App</h1>
 
